@@ -1,0 +1,474 @@
+//＠＠ 引入繼承模組
+@import './@public_scss_mix.scss';
+
+// 左欄按鈕
+.moreSearch_button {
+    
+    /* display: flex; */
+    /* margin-left: 2rem; */
+    width: 50px;
+    height:160px;
+    position: fixed;
+    bottom: 3rem;
+    z-index: 10;
+    
+    // border: #ffffff 1.5px solid;
+    // border-radius: 8px;
+    // background-color: rgba(251, 251, 251, 0.212);
+    cursor: pointer;
+    background: rgba(241, 241, 241, 0.89);
+    border-radius: 0 5px 5px 0;
+    box-shadow: 2px 2px 20px -1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: width 0.5s ease-in-out, padding-left 0.5s ease-in-out;
+    i {
+        color: hsla(0, 2%, 60%, 1);
+        transition: all 0.5s ease-in-out;   
+    }
+
+    span{
+        width: 35px;
+        height: 0px;
+        // left: 6px;
+        margin: 15px 0;
+        border: 0.5px solid #7f7a7aba;
+        transition: all 0.5s ease-in-out;
+    }
+
+    p{
+        color: hsla(0, 1%, 25%, 1);
+        writing-mode: vertical-rl; 
+        letter-spacing:3px;
+        transition: all 0.5s ease-in-out; 
+        
+    }
+    &:hover
+    {
+        padding-left: 1rem;
+        width: 66px;
+        i
+        {
+            color: #21CD24;
+        }
+        span
+        {
+            border-color: #21CD24;
+        }
+        p
+        {
+            color: #21CD24;
+        }
+    }
+
+
+}
+
+
+
+
+
+/* 滑出卡片 */
+.moreSearch_card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    // padding: 2rem;
+    // padding-right: 5rem;
+    position: fixed;
+    z-index: 11;
+    // width: 30%;
+    width: 0;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.856);
+    box-shadow: 2px 2px 20px -1px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(19px);
+
+    overflow-y:scroll;
+
+
+}
+
+.moreSearch_card>div
+{  
+    margin: 1rem 0 ;
+    font-size: 1.3rem;
+}
+// 找你的運動夥伴！
+.clo_1{
+    @extend %flex_row;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+            font-family: 'Noto Sans TC', sans-serif;
+            font-weight: 900;
+            font-size: 2.5rem;
+            margin-bottom: 0;
+    }
+}
+
+// 全部清除按鈕
+.moreSearch_card_clear{
+
+    @extend %flex_row;
+
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    // color: #FF7A7A;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: #FF7A7A 2px solid;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    i{
+        color: black;
+        font-size: 0.5rem;
+        margin-left:10px;
+        transition:all 0.5s;
+    }
+
+    &:hover{
+        i{   color: rgb(255, 255, 255);
+        transform: rotate(180deg);
+        }
+        color: rgb(255, 255, 255);
+        background-color: #FF7A7A;
+        transform: translate(-1px,-2px);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2)
+
+
+    }
+}
+
+.clo_02{
+    @extend %flex_row;
+  
+    p{
+        color: rgb(143, 139, 139);
+        font-size: 1rem;
+        font-weight: 200;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+       
+        
+    }
+}
+.moreSearch_card_title
+{  
+    font-weight: 400;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.moreSearch_card_box>button
+{
+    border: none;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding: 0.3rem 1rem;
+    font-size:1rem;
+    margin-bottom: 0.8rem;
+    transition: 0.2s all ease-in-out;
+    cursor: pointer ;
+    &:hover{
+        color: rgb(255, 255, 255);
+        background-color: #5CC428;
+        border-color: #5CC428;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        transform: translate(-1px,-2px);
+    }
+
+}
+.moreSearch_card_box_button_change
+{
+    color: rgb(255, 255, 255);
+    background-color: #5CC428 !important;
+    border-color: #5CC428 !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+
+
+/* 選擇性別 */
+.moreSearch_card_male label
+{
+    font-size:1rem;
+}
+
+/* 選擇年齡 */
+
+.range_bar_box
+{
+    display: flex;
+    justify-content:flex-start;
+
+}
+
+.range_bar
+{
+    width: 70%;
+    /* padding-right: 50px; */
+    padding-left: 10px;
+    border-color:transparent ;
+}
+.range_bar_box>label
+{
+    font-size: 1rem;
+    margin: 0 0 0 10px;
+    /* margin-right:5px; */
+    color: #0d6efd;
+}
+
+
+
+.display_block {
+    display: block;
+}
+
+/* 隱藏 */
+.hide {
+    display: none;
+}
+
+.open {
+    left: 30%;
+}
+
+
+
+
+// 年齡拉桿----------------------------
+
+
+.jq_slider_rang_out{
+    margin: 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    margin-left: 2.5rem !important;  
+    // 年齡文字
+    p{
+          
+            font-size: 1rem;
+            align-self: center;
+            color: rgb(54, 54, 54); 
+            font-weight: 500;
+            margin-top: -7px;
+          
+    }
+}
+
+.post_content_box .jq_slider_rang{
+    width: 80%;
+}
+
+.jq_slider_rang{
+    
+    width: 65%;
+    margin: 0 !important;
+   
+    // 拉桿圓圈
+    a{
+        background:rgb(0, 0, 0) !important;
+        border-radius: 50px;
+        font-size: 15px;
+        border: #353634 2px solid !important;
+        top: -6px !important;
+    }
+  
+
+}
+
+
+//拉桿控制項
+.ui-widget-content{
+  
+   border: transparent !important;
+   background: #3536343e  !important; 
+   border-radius: 25px !important;
+   height: 3px !important;
+  
+
+}
+
+
+// 拉桿範圍
+.ui-slider-range.ui-widget-header{
+margin: 0 !important;
+
+
+}
+
+.ui-widget-header{
+    background:  #353634!important;
+}
+
+
+//  地區下拉選單----------------------------
+.choose_place{
+
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-color: #000;
+    // border-radius: 25px;
+    border-bottom:1.5px solid black ;
+    i{
+        font-size: 1rem;
+        float: right;
+    }
+}
+
+
+
+.dropdown_content{
+
+
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 10px rgba(73, 73, 73, 0.1);
+    width:100%;
+
+    margin: 0 auto;
+    z-index: 1;
+    height: 0;
+    overflow: hidden;
+    float: left;
+
+    position: absolute;
+    top: 39px;
+    // @extend %flex_column;
+
+    transition:all 0.4s ease-in-out;
+    div{
+        padding: 1rem 0.8rem;
+        box-sizing: border-box;
+        font-size: 1rem;
+        text-decoration: none;
+        color: rgb(132, 130, 130);
+        transition: all 0.4s ease-in-out;
+        overflow: hidden;
+
+        &:hover{
+            transition: all 0.2s ease-in-out;
+            color: rgb(0, 0, 0) ;
+            background-color: rgb(233, 233, 233) ;
+
+        }
+    }
+}
+
+.choose_place_out {
+    width: 100%;
+    // height: 30px;
+    transition: 0.4s ease-in-out;
+    overflow: visible;
+    position: relative;
+    // float: left;
+
+    i{
+        transition: 0.4s ease-in-out;
+    }
+
+    &:hover
+    {
+        i
+        {
+            transform: rotate(180deg);
+        }
+        .dropdown_content
+        {
+            height: 200px;
+            display: block;
+            overflow-y: scroll;
+        }
+    }
+    @extend %flex_column;
+}
+// 性別選擇----------------------------
+.form-check{
+    margin: 1rem 0;
+    @extend %flex_row;
+
+}
+
+.moreSearch_card_box input {
+    // 去除樣式
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  
+    border: 2px solid #999;
+    // 動畫
+    transition: 0.2s all linear;
+    // outline: none;
+    margin-right: 0.5rem;
+
+  }
+  
+  input:checked {
+    border:7px solid black;
+  }
+  
+
+
+
+//進階搜尋內的搜尋按鈕
+.moreSearch_card_search
+{
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    color: white;
+    text-align: right;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: #21CD24 2px solid;
+    background-color: #21CD24;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+    i{
+        color: white;
+        font-size: 1rem;
+        margin-left:10px;
+        transition:all 0.5s;
+    }
+    div
+    {
+        float: left;
+    }
+
+    &:hover{
+        font-weight: 700;
+        transform: translate(-1px,-2px);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4)
+    }
+}
+
+
+
+
+.receive{
+    margin-left: 22rem;
+    position: fixed;
+             
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        color: rgb(0, 0, 0) ;
+        font-size: 1.5rem;
+        cursor: pointer;
+     
+    }
+}

@@ -1,0 +1,508 @@
+@import './@public_scss_mix.scss';
+
+// 隱藏整個區塊用
+.display_none {
+    display: none;
+}
+
+// 文章外邊距
+.activity_content_out{
+    @extend %activity_content_out;
+}
+// 文章整個區塊
+.activity_display{
+    @extend %activity_display;
+}
+
+// 關閉按鈕
+.activity_display_close {
+    @extend %activity_close;
+
+    i {
+        transition: all 0.5s;
+        @extend %close_icon;
+    }
+    &:hover
+    {
+        i
+        {
+            transform: translateY(-3px);
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #FF5858;
+        }
+    }
+
+    
+}
+
+
+
+// 刊頭照片
+.activity_img{
+    @extend %activity_img;
+    background-image: url(https://images.unsplash.com/photo-1621432253147-464524b9eaa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80);
+}
+
+.activity_author_img{
+  @extend %user_img;
+}
+
+// 發文者區塊
+.activity_author {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    top: 0px;
+    /* bottom:400px; */
+    width:100%;
+    height: 5rem;
+    padding: 1rem 0;
+    background-color:rgba(255, 255, 255);
+    box-shadow: 3px 0px 3px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* background-color: rgb(255, 192, 203); */
+    /* box-shadow: 0px -5px 12px -7px rgb(0 0 0 / 25%) */
+    /* 背景圖 */
+    
+}
+
+
+// 發文者資訊
+.activity_author_detail{
+    // width: 100%;
+    height: 100%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    :nth-child(1){
+        margin-bottom: 0.5px;
+    }
+    :nth-child(2){
+        color:#9C9797 ;
+    }
+}
+
+.activity_content_box_out{
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgb(128, 128, 128, 0.4);
+ 
+}
+
+.activity_content_box{
+    padding: 1.5rem 4rem;
+}
+
+// 我要報名按鈕
+.add_activity {
+    
+    border: 1pt solid #5CC428;
+    color: #FFF;
+    border-radius: 20px;
+    padding:6px 10px 6px 8px;
+    background-color: #5CC428;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    i
+    {
+        background-color: transparent;
+        transition: all 0.3s ease-in-out;
+        margin-right: 0.3rem;
+        color: #fff;
+
+    }
+    &:hover
+    {
+        transform: translate(-1px,-2px);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+        i
+        {
+            transform: rotate(180deg);
+        }
+
+    }
+}
+
+.add_activity:hover{
+    background-color:  #21CD24;
+    color: #F8F7F7;
+}
+
+// 發文標題
+.activity_title_box{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    .activity_title{
+        display: flex;
+        align-items: flex-end;
+    }
+    h3{
+        align-self: flex-start;
+        font-size: 2rem;
+        font-weight: 700;
+        color: hsla(0, 0%, 13%, 1);
+    }
+
+    .my_icon{
+        color: #9C9797;
+        display: flex;
+        margin-left: 1rem;
+        margin-bottom: 6px;
+
+        i{
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+.keyword{
+    @extend %keyword;
+}
+
+.keyword_male{
+    @extend %keyword;
+    background-color:#FF7A7A;
+}
+
+.keyword_old{
+    @extend %keyword_border;
+}
+
+.keyword_deadline{
+    @extend %keyword_border;
+}
+
+.keyword_startline
+{
+    @extend %keyword;
+    text-decoration: none;
+    margin-right: 8px;
+    padding: 2px 15px;
+    background-color:transparent;
+    color:#009CDF;
+    border-radius: 20px;
+    border: 1pt solid #009CDF;
+}
+
+
+// 活動內容
+.activity_content{
+    margin: 2rem 0;
+    line-height: 1.5rem;
+    color: #7E7D7D;
+    p{
+        margin-bottom: 1.5rem;
+    }
+     hr{
+        border: 0.5px solid #D9CCCC;
+    }
+}
+
+// 綠色標籤
+.line_icon{
+@extend %line_icon;
+}
+
+// 報名細節
+.activity_detail_box{
+    display: flex;
+    flex-direction: column;
+   
+    .my_icon{
+        display: flex;
+        margin-bottom: 1rem;
+        p{
+            font-size: 1.1rem;
+            font-weight:bold;
+            color: hsla(0, 0%, 13%, 1);
+        }
+    }
+    .activity_date{
+        display: flex;
+        p{
+            color:hsla(0, 2%, 60%, 1);
+            font-size: 1rem;
+            margin-left: 1.1rem;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.activity_add_date{
+    display: flex;
+    p{
+        color:hsla(0, 2%, 60%, 1);
+        font-size: 1rem;
+       
+        margin-left: 1.1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.activity_add_person{
+    display: flex;
+    justify-items: center;
+    i{
+        color: #21CD24;
+        font-size: 1rem;
+        margin-left: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
+    :nth-child(2){
+        color: #21CD24;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+//發文者使用區（要隱藏）
+.activity_author_can_see{
+display: flex;
+justify-content: flex-end;
+align-items: center ;
+margin-bottom: 1rem;
+
+button{
+    margin-left: 0.5rem;
+    text-decoration: none;
+    padding:3px 15px;
+    border-radius: 10px;
+    border:transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+   
+    // 檢視報名者資料
+    &.view_activity_add_person{
+        background-color: $blue;
+        color: white;
+       
+        &:hover{
+            background-color: $hover_blue;
+        }
+    }
+
+     // 編輯
+    &.edit_activity_content{
+        border: 1pt solid  $blue;
+        background-color: transparent;
+        color:  $blue;
+    }
+    
+    &.delet_activity_content{
+        background-color: #FF5858;
+        color: white;
+    }
+
+}
+
+}
+// 留言板
+.activity_message {
+
+    bottom: 0;
+    width: 100%;
+    padding:2rem 4rem 0rem 4rem;
+    background-color: #F5F5F5;
+    // height: 232px;
+    // overflow: hidden;
+    .my_icon{
+        display: flex;
+        margin-bottom: 0.5rem;
+        height: 2rem;
+        i{
+            color: #21CD24;
+            font-size: 1rem;
+            margin-right: 0.8rem;
+        }
+        p{
+            font-size: 1.1rem;
+            font-weight:bold;
+        }
+
+       
+    }
+    // 留言者橫排(頭貼 姓名 內容)
+    .activity__questioner_row{
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+        }
+    .activity__message_detail{
+
+        display: flex;
+        justify-content: space-between;
+        border-bottom:1pt solid #D9CCCC;
+        padding-top: 2rem;
+        padding-bottom:2rem;
+        // margin-bottom: 1rem;
+        height: 5rem;
+        
+        .activity__questioner_content{
+            // background-color: #fff;
+            margin: 5px 0;
+            padding:0.2rem 0;
+            border-radius: 25px;
+            color: #7E7E7E;
+         
+            
+        }
+        // 留言者名稱
+        .activity__questioner_name{
+          
+            font-weight:600;
+        }
+
+        // 留言者照片
+        .activity__questioner_img{
+            width: 36px;
+            height: 36px;
+            border-radius: 40px;
+            margin-right: 1rem;
+           
+           
+            background-image:url(../img/vjd_nd.png);
+            background-position: center;            background-size: cover;
+        }
+        // 留言時間
+        .activity__question_time{
+            align-self:flex-end;
+            color: #9C9797;
+            margin-bottom: 8px;
+        }
+
+        // 查看全部留言
+      
+    }
+
+}
+
+.see_all_message_box{
+    
+    display: flex;
+    justify-content: center;
+    background-color: #F5F5F5;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    i{
+        margin-left: 1rem;
+        color: #595959;
+    }
+    
+}
+// 個人留言
+.activity_user_message{
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    box-shadow: 0px -5px 12px -7px rgba(0, 0, 0, 0.25);
+    padding: 0 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    :nth-child(4){
+        margin-right: 0;
+    }
+  
+    .message_box{
+        background-color: #F1F1F1;
+        color:#393838;
+        margin: 1rem 0;
+        padding: 0.5rem 2rem;
+        border-radius: 25px;
+        flex-grow: 3;
+        border: none;
+       outline: none;
+       
+       font-size:1rem ;
+
+       &::placeholder{
+        color: #d8d8d8;
+       }
+
+    }
+    i{
+        margin: 0rem 1.2rem; 
+    }
+    .fa-star:hover{
+        color: rgb(247, 217, 47);
+    }
+
+}
+
+
+// 報名者照片
+.activity_add_person_img_box{
+    display: flex;
+    margin-left: 1.1rem;
+    flex-wrap: wrap;
+    .activity_add_person_img{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+       
+        /* 使用者照片 */
+        background-image:url(../img/vjd_nd.png);
+        background-position: center;
+        /* background-repeat: no-repeat; */
+        background-size: cover;
+        // box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.activity_add_person_img_box .activity_add_person_img:nth-child(13n+8) .hover_user_out
+{
+    left: -80px;
+}
+.activity_add_person_img_box .activity_add_person_img:nth-child(13n+9) .hover_user_out
+{
+    left: -124px;
+}
+.activity_add_person_img_box .activity_add_person_img:nth-child(13n+10) .hover_user_out
+{
+    left: -168px;
+}
+.activity_add_person_img_box .activity_add_person_img:nth-child(13n+11) .hover_user_out
+{
+    left: -212px;
+}
+.activity_add_person_img_box .activity_add_person_img:nth-child(13n+12) .hover_user_out
+{
+    left: -256px;
+}
+.activity_add_person_img_box .activity_add_person_img:nth-child(13n+13) .hover_user_out
+{
+    left: -300px;
+}
+
+
+
+
+// .height_232px_overflow_hidden
+// {
+//     height: 232px;
+//     overflow: hidden;
+// }
+.activity__message_detail_out:nth-child(3)~.activity__message_detail_out
+{
+    display: none;
+}
+
+.activity__message_detail_out_block
+{
+    display: block !important;
+}

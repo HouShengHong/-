@@ -1,0 +1,280 @@
+@import './@public_scss_mix.scss';
+
+// 全部共用
+* {
+  @extend %all_style;
+}
+
+html {
+   @extend %html_fontsize;
+}
+body {
+    @extend %body_min-width;
+
+}
+
+
+.web_display {
+    display: none;
+}
+
+/* 上方照片 */
+.header {
+    // min-height: 720px;
+    height:15rem;
+    width: 100%;
+    background-image: url(../img/index.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -400px;
+    /* min-width: 1280px; */
+}
+
+// 背景暗色效果
+.header_mask {
+
+    height: 100%;
+    /* width: 100%; */
+    background-image: linear-gradient(rgba(40, 40, 40, 0.8), rgba(22, 22, 17, 0.8));
+    color: transparent;
+}
+
+.header_content {
+   @extend %flex_column;
+    position: relative;
+    top: 5%;
+}
+
+.sligen_box{
+    @extend %flex_row;
+    align-items: flex-end;
+    .h1
+    {
+        cursor: default;
+    }
+    
+}
+.web_name {
+    
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0;
+    /* letter-spacing: 3px; */
+}
+
+
+.web_slogen {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    margin-bottom:0.3rem;
+    margin-left:1.5rem;
+}
+
+
+
+.container {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    width: calc(100% - 16rem);
+}
+
+.container_post {
+    margin-left: 20rem;
+    margin-right: 20rem;
+    width: calc(100% - 40rem);
+}
+
+
+// 內文區塊
+
+.main {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+    background-color:  #F8F7F7;;
+    // box-shadow: inset 0px 2px 10px rgb(200, 200, 200, 0.5);
+
+}
+
+.post_content_padding_top {
+  
+    padding-top: 2.5rem;
+    
+}
+
+.post_content_out {
+    @extend %flex_column;
+    margin-top: 2.5rem;
+    width: 100%;
+    /* height: 800px; */
+    background: #F8F7F7;
+    flex-wrap: wrap;
+
+
+
+    // 類別標題
+    .post_content_box{
+
+        margin: 2rem 0;
+        // height: 105.81px;
+        // overflow:visible;
+    }
+
+    .my_icon{
+        @extend %my_icon;
+        p{
+            font-weight: bold;
+            color: hsl(0deg, 0%, 13%);
+            font-size: 1.1rem;
+        }
+
+        .line_icon{
+            @extend %line_icon;
+        }
+    }
+
+    .post_content{
+        margin-left: 2.5rem;
+        
+    }
+
+    .send_btn{
+        background-color: $main_green;
+        border-radius: 50px;
+        padding: 0.5rem;
+        text-align:center;
+        width: 80%;
+        margin: 0 auto;
+        transition: all  0.3s 0s ease-in-out;
+        cursor: pointer;
+        p{
+            color: #fff;
+            font-size: 1.5rem;
+        }
+        &:hover
+        {
+            transform: translate(-2px,-3px);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+            background-color:rgb(33, 205, 36);
+        }
+    }
+}
+
+.input_box_for_post_activity{
+   
+    background-color: #fff;
+    padding: 0.5rem 2rem;
+    border: 1px solid $light_grey;
+    border-radius:8px;
+    input{
+        outline: none;
+        border: none;
+        width:100% ;
+        font-size: 1rem;
+        ::placeholder{
+            color: $light_grey;
+        }
+    }
+
+    textarea{
+        resize: none;
+        outline: none;
+        border: none;
+        width:100% ;
+        height: 200px;
+        font-size: 1rem;
+        ::placeholder{
+            color: $light_grey;
+        }
+    }
+}
+
+.post_content_place{
+    
+    @extend %flex_row;
+    justify-content: space-between;
+    .input_box_for_post_activity{
+    margin-left: 2rem;
+    width: 80%;
+    }
+}
+
+// ---拉桿（人數、年齡）範圍-----------------------------------
+// css檔在moreSearch裏面２１６
+
+//  地區下拉選單----------------------------
+// .choose_place{
+    
+//     border: none;
+//     font-size: 1rem;
+//     padding: 0.5rem ;
+//     border-color: #000;
+//     // border-radius: 25px;
+//     border-bottom:1.5px solid black ;
+//     p{
+//         float: left;
+//         padding-right: 1rem;
+//     }
+
+//     i{
+//         font-size: 1rem;
+//         float: right;
+//     }
+// }
+
+.choose_place_out {
+    width: 6rem;
+    height: 52.695px;
+    cursor: pointer;
+    @extend %flex_column;
+}
+.dropdown_content div
+{
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+.post_keep
+{
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+}
+
+// .dropdown_content{
+//     background-color: rgb(255, 255, 255);
+//     box-shadow: 10px 10px 10px rgba(73, 73, 73, 0.1);
+//     width:100%;
+//     display: none;
+//     margin: 0 auto;
+//     float: left;
+//     z-index: 2;
+//     // border-radius: 10px;
+//     //  @extend %flex_column;
+
+//     div{
+//         font-size: 1rem;
+//         margin-bottom: 0.5rem;
+//         text-decoration: none;
+//         color: rgb(132, 130, 130);
+//         padding: 0.8rem;
+//         &:hover{
+//             // display: inline-block;
+//             color: rgb(0, 0, 0) ;
+//             background-color: rgb(233, 233, 233) ;
+          
+//         }
+
+        
+//     }
+
+// }
+
+
+// .choose_place_out:hover .dropdown_content{
+//     color: rgb(227, 227, 227) ;
+    
+//     @extend %flex_column;
+// }
+
+

@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+
+.activity_content_out,.activity_add_personal_content_out,.view_personal_content_out {
+  width: 500px;
+  max-width: 500px;
+}
+
+.activity_content{
+  margin:28px 0;
+}
+
+.activity_img{
+  height: 200px;
+}
+
+// 關閉
+.activity_display_close,.view_activity_add_person_close,.view_personal_close {
+  position: fixed;
+  margin-top: 1rem;
+  margin-left: 26rem;
+}
+
+
+// 內文邊距
+.activity_content_box {
+  padding: 1.5rem 2rem;
+}
+
+// 發文標題
+.activity_title_box{
+
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  
+  // 標題／地點盒
+  .activity_title{
+    flex-direction: column;
+  }
+
+  // 地點
+  .my_icon{
+      margin:0.8rem 5px;
+      align-self: flex-start;
+  }
+}
+
+
+.activity_tag{
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+
+
+  .keyword_male,.keyword_old,.keyword_deadline{
+    margin-top: 0.5rem;
+  }
+}
+
+// 留言
+.activity_message {
+  padding: 2rem 2rem;
+  padding-bottom: 0;
+}
+
+
+// 使用者留言
+.activity_user_message{
+  height: 3.5rem;
+  padding: 0 2rem;
+
+}
+
+
+/*檢視報名者ＲＷＤ－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+.add_person_card{
+  padding: 1.5rem 55px;
+}
+
+.activity_content_box{
+  padding: 1rem 2rem;
+  h3{
+    font-size: 2rem;
+  }
+}
+
+/*觀看他人介紹ＲＷＤ－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－－*/
+
+.view_personal_content_box{
+  padding: 2rem 2rem;
+}
+
+
+//  標題
+.view_personal_title_box {
+  .row_left {
+      box-sizing: border-box;
+
+      justify-content: flex-start;
+      align-items: center;
+
+      .user_img {
+
+          width:5rem;
+          height: 5rem;
+          padding-left: 0rem;
+          // margin-left: 0rem;
+
+
+          .male_icon {
+
+              margin-top: 3.5rem;
+              margin-left:3.5rem;
+
+          }
+      }
+  }
+
+}
+
+// 使用者姓名,年齡,Emial
+.user_person_content_box {
+
+  .view_user_content {
+      font-weight: 500;
+
+      p:nth-child(1) {
+          font-size: 1.2rem;
+      }
+
+      p:nth-child(2) {
+          font-size: 1.2rem;
+      }
+  }
+}
+
+
+
+
+.post_activitys{
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+
+  // 發文數目
+  p:nth-child(1){
+      font-size: 1.3rem;
+      font-weight: 900;
+      margin-left: 0.2rem;
+  }
+
+  // 篇文章
+  p:nth-child(2){
+      line-height: 1.3rem;
+  }
+}
+
+// 卡片區容器
+.view_personal_content_out{
+
+  .add_person_out{
+      padding: 0 2rem;
+      padding-bottom: 2rem;
+      h2{
+        font-size: 1.2rem;
+      }
+  }
+  
+  // 關於我
+  .view_personal_about{
+
+      margin: 1rem 2rem;
+     
+      h2{
+          font-size: 1.2rem;
+      }
+  }
+}
+
+
+
+// 卡片區容器
+.view_personal_content_out{
+
+  .add_person_out{
+  
+      .activity_card_box {
+        h3{
+          font-size: 1.3rem ;
+      }
+      }
+      
+  }
+  
+}
+
+
+
+//發文頁----------------------
+.web_slogen{
+  margin-left:0rem;
+}
+
+.post_content_padding_top {
+  padding-top: 0rem;
+}
+
+.container_post{
+  margin: 0;
+}
+
+
+.container_post {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  width: calc(100% - 4rem);
+}
+
+.post_content_out{
+  margin-top: 0rem;
+  padding-top: 50px;
+
+
+}
+
+
+.post_content_place{
+
+  .input_box{
+  width: 60%;
+  }
+}
+
+
+.post_content_box .jq_slider_rang{
+  width: 70%;
+}
+
+.header_content_post_top{
+  top:10%;
+}

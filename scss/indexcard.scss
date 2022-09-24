@@ -1,0 +1,184 @@
+//＠＠ 引入繼承模組
+@import './@public_scss_mix.scss';
+// 卡片區
+.main{
+@extend %activity_card;
+}
+
+.row-1{
+    .activity_card_deadline{
+        
+        text-decoration: none;
+        margin-right: 10px;
+        padding: 0 15px;
+        border:1.5px solid #FF7A7A;
+        color:  #FF7A7A;
+        border-radius: 20px;
+    }
+    .activity_card_startline
+    {
+        text-decoration: none;
+        margin-right: 10px;
+        padding: 0 15px;
+        border:1.5px solid #009CDF;
+        color:  #009CDF;
+        border-radius: 20px;
+    }
+    .row-1_right{
+        display: flex;
+  
+    }
+}
+
+
+.row-2{
+    margin: 10px 0;
+    .mycard-icon{
+        margin-top: 0.6rem;
+    }
+}
+
+
+
+// index裡的卡片
+.activity {
+    /* height: 1000px; */
+    /* background-color: pink; */
+    padding-top: 2.5rem;
+    
+}
+
+.activity_card_out {
+    margin-top: 2.5rem;
+    width: 100%;
+    /* height: 800px; */
+    background: #F8F7F7;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.activity_card_box {
+    padding: 10px;
+    
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    width: 50%;
+    /* width: calc(40%-20px); */
+    height: 14rem;
+}
+
+.activity_card {
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    box-shadow: 6px 9px 17px -1px rgba(0, 0, 0, 0.07);
+    display: flex;
+}
+
+.activity_card_img {
+    padding-right: 1rem;
+    /* padding-left: 0rem; */
+    padding-top: 0.5rem;
+    /* flex-grow: 1; */
+    /* background-color: red; */
+
+}
+
+.activity_card_img>img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+    
+
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.activity_card_content {
+    flex-grow: 1;
+    /* background-color: yellow; */
+
+}
+
+
+
+
+/* 這邊是妳打的 */
+
+.activity_card_content>.col {
+    display: flex;
+    flex-direction: column;
+   height: 100%;
+    justify-content: space-between;
+}
+
+.mycard-icon,
+.row-1,
+.row-3 {
+    display: flex;
+}
+
+.row-1,
+.row-3 {
+    padding-top: 10px;
+}
+
+.row-1 {
+    justify-content: space-between;
+    padding-bottom: px;
+}
+
+
+
+// #address,
+// #msg {
+//     padding-right: 20px;
+// }
+
+
+.mycard-icon {
+    align-items: center;
+}
+
+.myCard-box p,
+h3 {
+    margin: 0;
+}
+
+.myCard-box p,
+i {
+    font-size: 1.2rem;
+    color: hsla(0, 2%, 60%, 1);
+}
+
+.myCard-box a {
+    font-size: 1.2rem;
+}
+
+.mycard-icon>i {
+    padding: 0px 5px 0px 5px;
+}
+
+.row-3 {
+    justify-content: space-between;
+}
+
+
+
+.msg-num-box {
+    display: flex;
+   .mycard-icon:nth-child(1)
+   {
+    padding-right: 20px;
+   }
+}
+
+

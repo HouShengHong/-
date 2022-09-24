@@ -1,0 +1,208 @@
+//＠＠ 引入繼承模組
+@import './@public_scss_mix.scss';
+
+
+.view_personal_display {
+    @extend %activity_display;
+
+
+}
+
+
+// 背景
+.view_personal_content_out {
+    @extend %activity_content_out;
+    background-color: $background_light_grey;
+}
+
+// 關閉按鈕
+.view_personal_close {
+    @extend %activity_close;
+
+    i 
+    {
+        transition: all 0.5s;
+        @extend %close_icon;
+    }
+    &:hover 
+    {
+        i
+        {
+            transform: translateY(-3px);
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #FF5858;
+        }
+    }
+}
+
+.view_personal_content_box {
+    padding: 3rem 5rem;
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgb(200 200 200 / 50%);
+}
+
+//  標題
+.view_personal_title_box {
+    .row_left {
+        box-sizing: border-box;
+        @extend %flex_row;
+        justify-content: flex-start;
+        align-items: center;
+
+        .user_img {
+
+            box-sizing: content-box;
+            background-image: url(../img/vjd_nd.png);
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            width:6rem;
+            height: 6rem;
+            padding-left: 1rem;
+            margin-left: 0rem;
+            border-radius:5rem;
+            filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.25));            
+            // padding: 2rem;
+            .male_icon {
+
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: $pink;
+                z-index: 10;
+                border-radius: 25px;
+    
+               
+                margin-top: 4rem;
+                margin-left:3rem;
+                position: relative;
+                left: 0.5rem;
+    
+                p {
+                    color: white;
+                    text-align: center;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+// 使用者姓名,年齡,Emial
+.user_person_content_box {
+    @extend %flex_column;
+    width: 100%;
+    // height: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 2rem;
+
+    .view_user_content {
+        font-weight: 500;
+        @extend %flex_row;
+        p:nth-child(1) {
+            font-size: 1.5rem;
+            padding-right: 0.8rem;
+            border-right: 1.5px solid black;
+        }
+
+        p:nth-child(2) {
+            font-size: 1.5rem;
+            padding-left: 0.8rem;
+        }
+    }
+
+    // email
+    .my_icon {
+        @extend %my_icon;
+        margin: 0;
+        margin-top: 0.5rem;
+        margin-left: 0.2rem;
+
+        p {
+            margin: 0;
+            margin-left: 0.5rem;
+        }
+    }
+}
+
+.post_activitys{
+    width: 100%;
+    @extend %flex_row;
+    justify-content: space-between;
+    margin-top: 0.2rem;
+
+    .how_much_post{
+        @extend %flex_row; 
+        align-items: flex-end;
+    }
+
+    p:nth-child(1){
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-left: 0.2rem;
+    }
+
+    p:nth-child(2){
+        padding-left: 10px;
+        padding-top: 0.5rem;
+        font-size: 1rem;
+        color: $light_grey;
+        line-height: 1.5rem;
+    }
+    
+        //  檢舉按鈕
+    .block{
+        @extend %keyword_border;
+        border-radius: 5px;
+        align-self: flex-end;
+        font-size: 1rem;
+
+    }
+
+}
+
+
+// 卡片區容器
+.view_personal_content_out{
+
+    .add_person_out{
+        @extend %flex_column;
+        padding: 0 4rem;
+        h2{
+            font: 1.2rem;
+            color: black;
+            font-weight: bolder;
+            margin: 22px;
+        }
+    
+        .activity_card_box {
+            width: 100%;
+            // 卡片內文字樣式
+            @extend %activity_card;
+        }
+        
+    }
+    
+    // 關於我
+    .view_personal_about{
+        @extend %flex_column;
+        margin: 1rem 4rem;
+     
+        padding-bottom: 2rem;
+        border-bottom: 1pt solid $light_grey;
+        h2{
+            font: 1.2rem;
+            color: black;
+            font-weight: bolder;
+            margin: 22px;
+        }
+        p{
+            margin:0 22px;
+            font-size: 1rem;
+            color: $text_grey;
+        }
+    }
+}
+

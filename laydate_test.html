@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>使用 layDate 独立版</title>
+  <link rel="stylesheet" href="./js/laydate/src/theme/default/laydate.css">
+</head>
+<body>
+    <div id="test6">
+        <div>
+          <input type="text" autocomplete="off" id="test-startDate-1"  placeholder="開始時間">
+        </div>
+        <div class="layui-form-mid">-</div>
+        <div>
+          <input type="text" autocomplete="off" id="test-endDate-1"  placeholder="結束時間">
+        </div>
+    </div>
+    <button></button>
+
+
+
+<!-- 引用laydate -->
+<script src="./js/laydate/src/laydate.js"></script>
+<!-- 自己寫的 -->
+<script>
+    // function changeDate(){
+    //     let date = new Date();
+    //     let y = date.getFullYear();
+    //     let m = date.getMonth()+1;
+    //     m = m<10 ? ('0'+ m) :m;
+    //     let d = date.getDate();
+    //     d = d<10 ? ('0'+ d) :d;
+    //     let h = date.getHours();
+    //     h = h<10 ? ('0'+ h) :h;
+    //     let i = date.getMinutes();
+    //     i = i<10 ? ('0'+ i) :i;
+    //     let s = date.getSeconds();
+    //     s = s<10 ? ('0'+ s) :s;
+    //     return y+'-'+m+'-'+d+' '+h+':'+i+':'+s;
+    // }
+    // var now = changeDate();
+    //日期时间范围
+    laydate.render({
+    elem: '#test10'
+    ,type: 'datetime'
+    ,range: true
+    });
+    //日期范围
+    laydate.render({
+        elem: '#test6'
+        ,type: 'datetime'
+        ,range: ['#test-startDate-1', '#test-endDate-1']
+    });
+    document.querySelector('button').addEventListener('click',function(e){
+        e.preventDefault()
+        console.log(document.getElementById("test-startDate-1").value)
+    })
+</script>
+</body>
+</html>
+

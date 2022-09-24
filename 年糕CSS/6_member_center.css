@@ -1,0 +1,355 @@
+body{
+    background-color:#F5F5F5 ;
+}
+
+.grid-container{   
+    display: grid;
+    grid-template-rows:70px 36px 60px 25px 100px ;
+    grid-template-columns:128px 80px 50px 140px 280px 550px auto 128px ;
+    /* margin: 0px 128px 0px 128px; */
+    height: 280px;  
+    width: 100%;  
+    box-shadow: 3px 3px 10px  rgba(0, 0, 0, 0.12);
+    background-color: #fff;
+    /* background: #F5F5F5; */
+}
+
+.boxshadow{
+    box-shadow: 10px 5px 5px red;
+    /* box-shadow:0px 12px 8px -12px #000;   */
+}
+
+/* 大頭貼位置 */
+.place1{
+    grid-row: 2/3;
+    grid-column: 2;
+    
+    grid-area:"photo";
+}
+
+.circular--square { 
+    border-radius: 50%;
+ }
+
+/* 姓名年齡位置 */
+.place2{
+    grid-row: 2;
+    grid-column: 4/6;
+    grid-area: "name_age";
+
+
+}
+
+.place2>label{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 132.52%;
+}
+
+/* mail圖片位置 */
+.place3{
+    grid-row: 3;
+    grid-column: 4;
+    margin: 15px 0px 0px 0px;
+    grid-area: "mail_photo";
+
+}
+
+/* mail位置 */
+.place4{
+    grid-row: 3;
+    grid-column: 4/5;
+    margin: 13px 0px 0px 35px;
+    grid-area: "mail";
+}
+
+.place4>label{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 132.52%;
+letter-spacing: 0.015em;
+color: #9C9797;
+}
+
+/* 關於我標籤的位置 */
+.place5{
+    grid-row: 4;
+    grid-column: 4;
+    margin: 0px 0px 0px 0px;
+    grid-area:" about_me";
+}
+
+.place5>label{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 18px;
+/* or 90% */
+
+display: flex;
+align-items: center;
+letter-spacing: 0.37px;
+}
+
+/* 關於我內容的位置 */
+.place6{
+    grid-row: 5;
+    grid-column: 4/8;
+}
+
+.place6>label{
+ font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 139.52%;
+letter-spacing: 0.18em;
+color: #7E7E7E;
+}
+
+/* 編輯按鈕 */
+.place7{
+    grid-row: 2;
+    grid-column: 7;
+    text-align: right;
+
+    /* margin-top: 50px; */
+}
+
+.button_edit{
+width: 75px;
+height: 27px;
+left: 1067px;
+top: 258px;
+border: 1px solid #009CDF;
+border-radius: 9px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+align-items: center;
+letter-spacing: 0.37px;
+color: #009CDF;
+background: white;
+
+}
+
+.button_edit:hover{
+    cursor: pointer;
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-rows:50px 120px 120px  80px 50px 30px ;
+    grid-template-columns:258px 300px 300px 300px auto 128px  ;
+    height: 500px; 
+    width: 100%;
+    /* background-color: white; */
+    background: transparent;
+}
+
+.box2>div{
+    margin-left: 10px;
+}
+
+.box2>div>hr{
+    background: #D9D9D9;
+    border: 1px solid #D6D6D6;
+    margin-bottom: 25px;
+}
+
+.box2_lable{
+    
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 18px;
+margin-bottom: 5px;
+display: flex;
+align-items: center;
+letter-spacing: 0.37px;
+width: 123px;
+}
+
+
+.box2_lable4{
+    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.37px;
+    width: 123px;
+    }
+
+.personal_information{
+    
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 139.52%;
+letter-spacing: 0.18em;
+color: #7E7E7E;
+
+}
+
+.place_1{
+    grid-row: 2;
+    grid-column: 2/6;
+}
+
+.place_2{
+    grid-row: 3;
+    grid-column: 2/6;
+}
+
+.place_3{
+    grid-row: 4;
+    grid-column: 2/6;
+}
+
+.place_4{
+    grid-row: 5;
+    grid-column: 2/6;
+}
+
+.place_5{
+    grid-row: 7;
+    grid-column: 3/4;
+}
+
+.place_6{
+    grid-row: 7;
+    grid-column: 4/6;
+    /* margin-left: 150px; */
+}
+
+.place_7{
+    grid-row: 7;
+    grid-column: 5/6;
+    /* margin-left: 220px; */
+
+}
+
+.place_8{
+    grid-row: 8;
+    grid-column: 3/6;
+}
+
+.box2_lable_activity_record{
+    /* margin-left: 220px; */
+    border-bottom:3px #D9D9D9 solid;
+    padding-bottom: 10px;
+ 
+}
+
+.box2_lable2{    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.37px;
+    width: 83px;
+    }
+
+
+
+.box2_lable3{    
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 18px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        letter-spacing: 0.37px;
+        width: 102px;
+        }
+
+.cardleft{
+    margin:auto;
+}
+
+.grid-container3{
+    background: #F5F5F5;
+}
+
+
+
+
+
+/* 韋茜改的 我發起的團/我報名的團－－－－－－－－－－－－－－/ */
+
+.flex_myCard{
+width: 50%;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+background-color: #F5F5F5;
+
+}
+
+.flex_myCard label{
+    box-sizing:content-box;
+    /* width: 100%; */
+    padding: 0 4rem;
+    padding-bottom: 10px;
+    cursor: pointer;
+    color: rgb(139, 134, 134);
+    border-bottom:3px #D9D9D9 solid;
+}
+
+.flex_myCard label:hover {
+    transition: 0.2s all linear;
+    border-bottom: 4px #5CC428 solid;
+    padding-bottom: 10px;
+    color: rgb(0, 0, 0);
+ 
+}
+
+
+.label_hover {
+   
+    border-bottom: 4px #5CC428 solid !important;
+    padding-bottom: 10px !important;
+    color: rgb(0, 0, 0) !important;
+ 
+}
+
+.display_none{
+    display: none;
+}
+
+.display_block{
+    display: block;
+}
+
+.like_nothing{
+    padding: 10px;
+    margin: 3rem 0;
+}
+
+.like_nothing>p{
+    /* display: inline-block; */
+    text-align:center;
+    margin:0 auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:#c0c0c0;
+}

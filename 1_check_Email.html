@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揪運動-註冊</title>
+    <link rel="icon" href="./img/title.ico" type="image/x-icon" />
+
+
+
+    <!-- 引用fontawe_some -->
+    <script src="https://kit.fontawesome.com/629732af24.js" crossorigin="anonymous"></script>
+    <!-- 引用jq -->
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css(scss)/Log_in.css">
+    <link rel="stylesheet" href="./css(scss)/nav.css">
+    <link rel="stylesheet" href="./css(scss)/post_activity.css">
+    <link rel="stylesheet" href="./年糕CSS/1_enter_Email.css">
+    <link rel="stylesheet" href="./年糕CSS/sing_inn.css">
+
+</head>
+
+<body>
+
+
+    <!-- 導引列 -->
+    <div class="nav" id="nav">
+        <div class="nav_content container">
+            <div class="nav_content_logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.36 173.89"  stroke="currentColor" id="nav_svg">
+                    <defs>
+                    </defs>
+                    <title>logo</title>
+                    <g id="圖層_2" data-name="圖層 2">
+                        <g id="圖層_1-2" data-name="圖層 1">
+                            <path class="cls-1"
+                                d="M126.11,137l.75-86.06A20,20,0,0,0,107,30.69l-65.24-.58-20.84-.17h-.17A20.09,20.09,0,0,0,.74,49.8L0,135.87a20,20,0,0,0,19.85,20.19L83,156.6a26.81,26.81,0,0,1,22.63,13l1.72,2.9a2.92,2.92,0,0,0,4.55.58A47.9,47.9,0,0,0,126,141.59c.06-.87.1-1.68.1-2.41a5.29,5.29,0,0,1,0-.8V138C126.09,137.63,126.11,137.3,126.11,137ZM50.24,119c0,9.09-7.7,16.48-17.14,16.48S16,128.09,16,119V103.83a6.49,6.49,0,1,1,13,0V119c0,1.93,1.86,3.5,4.16,3.5s4.16-1.57,4.16-3.5V61.74a6.49,6.49,0,1,1,13,0Zm18.07,8.43a6.49,6.49,0,0,1-13,0V61.57a6.49,6.49,0,0,1,13,0ZM108,119c0,9.09-7.7,16.48-17.14,16.48S73.74,128.09,73.74,119V61.22a6.49,6.49,0,1,1,13,0V119c0,1.93,1.86,3.5,4.16,3.5S95,120.93,95,119V61.74a6.49,6.49,0,1,1,13,0Z" />
+                            <path class="cls-1" d="M43.25,161.5l0,.06v-.06Z" />
+                            <path class="cls-1"
+                                d="M174.11,147.05A56.41,56.41,0,0,1,162.26,160a5.21,5.21,0,0,1-5.48,1,6.25,6.25,0,0,1-3.25-2.57l-4.7-7.72a18.81,18.81,0,0,0-15.09-9c.08-1.26.1-2.34.1-3.23l0,.06v-.06c0-.47,0-.91,0-1.38L134.59,51a27.72,27.72,0,0,0-27.5-28L42.28,22.4A27.78,27.78,0,0,1,69.52,0H155.6a27.76,27.76,0,0,1,27.76,27.76v86.08c0,.46,0,.91,0,1.37v.06l0-.06A57,57,0,0,1,174.11,147.05Z" />
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+            <!-- <p>JoinExercise.
+            </p> -->
+
+            <div class="nav_content_right">
+                <div class="sign_up" id="nav_index">
+                    <i class="fa-solid fa-house"></i>
+                    首 頁
+                </div>
+
+                <div class="sign_up" id="nav_post">
+                    文章區
+                </div>
+
+                <div class="sign_up" id="sign_up">
+                    註 冊
+                </div>
+                <div class="sign_up" id="sign_out">
+                    登 出
+                </div>
+                <div class="sign_in" id="sign_in">
+                    登 入
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 登入窗 -->
+        <div class="log_in_alert" id="log_in_alert" style="display: none;">
+            <div class="triangle"></div>
+            <div class="log_in_out">
+
+                <!-- 登入標題 -->
+                <div class="log_in_title">
+                    <h1>Log In</h1>
+                </div>
+                <!-- 輸入帳號 -->
+                <div class="input_box">
+
+                    <i class="fa-solid fa-user-large"></i>
+                    <input type="text" placeholder="帳號">
+                </div>
+
+                <!-- 輸入密碼 -->
+                <div class="input_box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="密碼">
+                </div>
+
+                <!-- 密碼驗證 /忘記密碼 -->
+                <div class="log_in_msg">
+                    <div class="x_out">
+                        <img src="./img/remove.png" alt="">
+                        <p>請重新輸入</p>
+                    </div>
+                    <p>忘記密碼</p>
+                </div>
+
+                <!-- 登入按鈕 -->
+                <div class="log_in_btn" id="log_in_btn">登入</div>
+
+                <!-- 或加入我們（文字） -->
+                <div class="or_add_us">
+                    <div class="or_add_us_line"></div>
+                    <p>或加入我們</p>
+                    <div class="or_add_us_line"></div>
+
+                </div>
+
+                <!-- 註冊按鈕 -->
+                <div class="sign_up_btn">註冊</div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 頭區 -->
+
+    <div class="header">
+        <div class="header_mask">
+            123
+            <div class="header_content container">
+                <!-- 點選此區塊跳轉到文章區 -->
+                
+                    <div class="sligen_box">
+                        
+                        <h1 class="web_name">註冊</h1>
+                        <h1 class="web_slogen">更多活動內容歡迎加入我們</h1>
+                    </div>
+            
+            </div>
+
+        </div>
+    </div>
+
+    <div class="progress_out container">
+        <ul class="progress">
+            <li class="active">請輸入Email</li>
+            <li>Email認證</li>
+            <li>資料填寫</li>
+            <li>資料確認</li>
+            <li>註冊成功</li>
+        </ul>
+    </div>
+
+
+    <!-- 輸入註冊資料區 -->
+    <div class="grid-container">
+
+        <div class="cell_1">
+            <div>
+                <h2>請 輸 入 E m a i l , 收 取 驗 證 碼 </h2>
+            </div>
+        </div>
+
+        <div class="cell_2">
+            <div >
+                <p>* 註 冊 E m a i l 即 為 你 的 帳 號</p>
+            </div>
+        </div>
+
+        <div class="cell_3">
+                <input class="input_text" type="text" placeholder="例：cccchain0226@gmail.com">
+        </div>
+
+        <div class="cell_4">           
+           <input id="sign_up_2" type="button" class="button_sendmail" value="寄 出 驗 證 碼" >           
+        </div>
+
+    </div>
+
+    <!-- 帖子區(卡片)-->
+    <!-- main>p用indrxcard.scss做 -->
+    <!-- <div class="main" >
+        <div class="activity container">
+            
+            <div class="activity_card_out">
+               
+
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- ---------------------------------- -->
+    <!-- 盛弘打得js -->
+    <script src="./js/nav.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揪運動</title>
+    <link rel="icon" href="./img/title.ico" type="image/x-icon" />
+
+
+    <!-- 日期選擇器 -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+
+    <!-- <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css'> -->
+
+    <link rel="stylesheet" href="css/date_index.css">
+
+
+    <!-- 引用fontawe_some -->
+    <script src="https://kit.fontawesome.com/629732af24.js" crossorigin="anonymous"></script>
+
+
+
+    <!-- 引用sweet_alert -->
+    <!-- <script src="./js/sweet_alert.js"></script>
+    <link rel="stylesheet" href="./css/sweet_alert.css">
+    <link rel="stylesheet" href="./css/Animate.css"> -->
+
+     <!-- owl -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"></link>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
+ 
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css(scss)/nav.css">
+    <link rel="stylesheet" href="./css(scss)/Log_in.css">
+    <link rel="stylesheet" href="./css(scss)/indexcard.css">
+    <link rel="stylesheet" href="./css(scss)/view_personal.css">
+    <link rel="stylesheet" href="./css(scss)/hover_user.css">
+
+
+    <!-- 彈出畫面CSS＿文章頁 -->
+    <link rel="stylesheet" href="./css(scss)/(index)activity_display.css">
+    <!-- 彈出畫面CSS＿報名者資訊 -->
+    <link rel="stylesheet" href="./css(scss)/add_activity_personal.css">
+    <!-- 左側滑出 進階搜尋css -->
+    <link rel="stylesheet" href="./css(scss)/moreSearch.css">
+
+
+    <!--  引JQ 年齡範圍拉桿 -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+
+    <!-- 引用laydate -->
+    <script src="./js/laydate/src/laydate.js"></script>
+
+    
+
+    <!-- rwd -->
+    <link rel="stylesheet" href="./css(scss)/index.css">
+    <link rel="stylesheet" media="screen and (max-width:720px)" href="./css(scss)/index_rwd.css">
+    <link rel="stylesheet" media="screen and (max-width:720px)" href="./css(scss)/(index)activity_display_rwd.css">
+
+
+
+</head>
+
+<body>
+
+
+
+    <!-- (覆蓋)詳細活動 -->
+
+    <div class="activity_display display_none" id="activity_display">
+        <div class="activity_content_out">
+            <div class="activity_img border_bottom_gray">
+                <!-- 關閉此頁按鈕 -->
+                <div class="activity_display_close" id="activity_display_close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            
+            <!-- 發文者資訊 -->
+            <div class="activity_author">
+           
+                <!-- 點選觀看個人介紹 -->
+                <div class="activity_author_img for_hover_user_out" id="activity_author_img">
+                   
+
+                    <!-- 滑過觀看使用者資料 -->
+                    <div class="hover_user_out" id="hover_user_out">
+                        <!-- 頭貼／姓名／年齡/mail -->
+                        <div class="row_left">
+                            <div class="activity_author_img">
+                                <div class="male_icon">
+                                    <p>女</p>
+                                </div>
+                            </div>
+                            <div class="add_person_content_box">
+                                <!--   姓名 年齡 -->
+                                <div class="add_person_content">
+                                    <p class="add_add_person_name">
+                                        娟娟
+                                    </p>
+                                    <p class="add_add_person_old">
+                                        25
+                                    </p>
+
+                                </div>
+                                <!-- email -->
+                                <div class="my_icon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                    <p class="add_add_person_Email">
+                                        ccc@gmail.com
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hover_user_about_me">
+                            <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                        </div>
+
+                        <div class="post_activity_num">
+                            <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="activity_author_detail">
+                    <p>王小明</p>
+                    <p>chain111@gmail.com</p>
+                </div>
+            </div>
+
+
+            <div class="activity_content_box">
+
+                <!-- 標題 -->
+                <div class="activity_title_box">
+                    <div class="activity_title">
+                        <h3>琉球自由淺水</h3>
+                        <div class="my_icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>琉球鄉</p>&emsp;
+                            <p>琉球淺水中心</p>
+                        </div>
+
+                    </div>
+
+                    <div class="add_activity">
+                        我要報名
+                    </div>
+                </div>
+
+                <!--關鍵字 -->
+                <div class="activity_tag ">
+                    <a href="" class="keyword">自由淺水</a>
+                    <a href="" class="keyword">菜鳥求教學</a>
+                    <a href="" class="keyword_male">限女性</a>
+                    <a href="" class="keyword_old">25歲以下</a>
+                    <a href="" class="keyword_deadline">已截止</a>
+                </div>
+                <!-- 內文 -->
+                <div class="activity_content">
+                    原本的內容
+                    <br>
+                    LINE：ccc123：ccc123</p>
+
+                </div>
+
+                <!-- 報名和活動時間．報名者 -->
+                <section class="activity_content_box_out">
+                    <!-- 報名時間 -->
+                    <div class="activity_detail_box">
+                        <div class="my_icon">
+                            <span class="line_icon"></span>
+                            <p>報名期間</p>
+                        </div>
+                        <div class="activity_add_date">
+                            <p class="activity_add_start_date">111/08/12 AM.8:00</p>
+                            <p>至</p>
+                            <p class="activity_add_end_date">111/08/20 PM.8:00</p>
+                        </div>
+                    </div>
+
+                    <!-- 活動時間 -->
+                    <div class="activity_detail_box">
+                        <div class="my_icon">
+                            <span class="line_icon"></span>
+                            <p>活動時間</p>
+                        </div>
+                        <div class="activity_date">
+                            <p class="activity_tart_date">111/08/12 AM.8:00</p>
+                            <p>至</p>
+                            <p class="activity_end_date">111/08/20 PM.8:00</p>
+                        </div>
+                    </div>
+
+                    <!-- 報名者 -->
+                    <div class="activity_detail_box">
+                        <div class="my_icon">
+                            <span class="line_icon"></span>
+                            <p>報名者</p>
+                        </div>
+
+                        <div class="activity_add_person">
+                            <i class="fa-solid fa-user-group"></i>
+                            <p>目前報名人數</p>
+                            <p class="activity_add_person_num">10</p>
+                            <p>/</p>
+                            <p class="activity_mix_person_num">10</p>
+                        </div>
+                        <div class="activity_add_person_img_box">
+                            <div class="activity_add_person_img for_hover_user_out">
+                            <!-- 滑過觀看使用者資料 -->
+                            <div class="hover_user_out" id="hover_user_out">
+                                <!-- 頭貼／姓名／年齡/mail -->
+                                <div class="row_left">
+                                    <div class="activity_author_img">
+                                        <div class="male_icon">
+                                            <p>女</p>
+                                        </div>
+                                    </div>
+                                    <div class="add_person_content_box">
+                                        <!--   姓名 年齡 -->
+                                        <div class="add_person_content">
+                                            <p class="add_add_person_name">
+                                                娟娟
+                                            </p>
+                                            <p class="add_add_person_old">
+                                                25
+                                            </p>
+
+                                        </div>
+                                        <!-- email -->
+                                        <div class="my_icon">
+                                            <i class="fa-regular fa-envelope"></i>
+                                            <p class="add_add_person_Email">
+                                                ccc@gmail.com
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="hover_user_about_me">
+                                    <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                </div>
+
+                                <div class="post_activity_num">
+                                    <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                </div>
+
+                            </div>
+                            </div>
+                            <div class="activity_add_person_img for_hover_user_out">
+
+
+                                <!-- 滑過觀看使用者資料 -->
+                                <div class="hover_user_out" id="hover_user_out">
+                                    <!-- 頭貼／姓名／年齡/mail -->
+                                    <div class="row_left">
+                                        <div class="activity_author_img">
+                                            <div class="male_icon">
+                                                <p>女</p>
+                                            </div>
+                                        </div>
+                                        <div class="add_person_content_box">
+                                            <!--   姓名 年齡 -->
+                                            <div class="add_person_content">
+                                                <p class="add_add_person_name">
+                                                    娟娟
+                                                </p>
+                                                <p class="add_add_person_old">
+                                                    25
+                                                </p>
+
+                                            </div>
+                                            <!-- email -->
+                                            <div class="my_icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                                <p class="add_add_person_Email">
+                                                    ccc@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hover_user_about_me">
+                                        <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                    </div>
+
+                                    <div class="post_activity_num">
+                                        <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activity_add_person_img for_hover_user_out">
+                                <!-- 滑過觀看使用者資料 -->
+                                <div class="hover_user_out" id="hover_user_out">
+                                    <!-- 頭貼／姓名／年齡/mail -->
+                                    <div class="row_left">
+                                        <div class="activity_author_img">
+                                            <div class="male_icon">
+                                                <p>女</p>
+                                            </div>
+                                        </div>
+                                        <div class="add_person_content_box">
+                                            <!--   姓名 年齡 -->
+                                            <div class="add_person_content">
+                                                <p class="add_add_person_name">
+                                                    娟娟
+                                                </p>
+                                                <p class="add_add_person_old">
+                                                    25
+                                                </p>
+
+                                            </div>
+                                            <!-- email -->
+                                            <div class="my_icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                                <p class="add_add_person_Email">
+                                                    ccc@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hover_user_about_me">
+                                        <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                    </div>
+
+                                    <div class="post_activity_num">
+                                        <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+                <!-- 發文者使用區（要隱藏） -->
+                <div class="activity_author_can_see">
+                    <button class="view_activity_add_person" id="view_activity_add_person">檢視報名者資料</button>
+                    <button class="edit_activity_content">編輯</button>
+                    <button class="delet_activity_content">刪除文章</button>
+                </div>
+
+
+
+
+
+                <!-- 我要報名按鈕 -->
+                <!-- <div class="add_activity">
+                    <button>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div>
+                        我要報名
+                    </div>
+                </div> -->
+
+
+            </div>
+
+            <!-- 問與答 -->
+            <section class="activity_message height_232px_overflow_hidden" id="activity_message">
+                <div class="my_icon">
+                    <i class="fa-solid fa-message"></i>
+                    <p>問與答</p>
+                </div>
+
+                <!-- 1 -->
+                <div class="activity__message_detail_out">
+                    <div class="activity__message_detail">
+                        <!-- 留言者照片 -->
+                        <div class="activity__questioner_row">
+                            <div class="activity__questioner_img for_hover_user_out">
+                                <!-- 滑過觀看使用者資料 -->
+                                <div class="hover_user_out" id="hover_user_out">
+                                    <!-- 頭貼／姓名／年齡/mail -->
+                                    <div class="row_left">
+                                        <div class="activity_author_img">
+                                            <div class="male_icon">
+                                                <p>女</p>
+                                            </div>
+                                        </div>
+                                        <div class="add_person_content_box">
+                                            <!--   姓名 年齡 -->
+                                            <div class="add_person_content">
+                                                <p class="add_add_person_name">
+                                                    娟娟
+                                                </p>
+                                                <p class="add_add_person_old">
+                                                    25
+                                                </p>
+
+                                            </div>
+                                            <!-- email -->
+                                            <div class="my_icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                                <p class="add_add_person_Email">
+                                                    ccc@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hover_user_about_me">
+                                        <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                    </div>
+
+                                    <div class="post_activity_num">
+                                        <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 留言者名稱內容 -->
+                            <div class="activity__questioner_clo">
+                                <p class="activity__questioner_name">王小明</p>
+                                <p class="activity__questioner_content">請問還可以加人數嗎1</p>
+                            </div>
+                        </div>
+
+                        <div class="activity__question_time">111/08/12 AM.8:00</div>
+
+                    </div>
+
+                </div>
+
+                <!-- 2 -->
+                <div class="activity__message_detail_out">
+                    <div class="activity__message_detail">
+                        <!-- 留言者照片 -->
+                        <div class="activity__questioner_row">
+                            <div class="activity__questioner_img for_hover_user_out">
+                                <!-- 滑過觀看使用者資料 -->
+                                <div class="hover_user_out" id="hover_user_out">
+                                    <!-- 頭貼／姓名／年齡/mail -->
+                                    <div class="row_left">
+                                        <div class="activity_author_img">
+                                            <div class="male_icon">
+                                                <p>女</p>
+                                            </div>
+                                        </div>
+                                        <div class="add_person_content_box">
+                                            <!--   姓名 年齡 -->
+                                            <div class="add_person_content">
+                                                <p class="add_add_person_name">
+                                                    娟娟
+                                                </p>
+                                                <p class="add_add_person_old">
+                                                    25
+                                                </p>
+
+                                            </div>
+                                            <!-- email -->
+                                            <div class="my_icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                                <p class="add_add_person_Email">
+                                                    ccc@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hover_user_about_me">
+                                        <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                    </div>
+
+                                    <div class="post_activity_num">
+                                        <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 留言者名稱內容 -->
+                            <div class="activity__questioner_clo">
+                                <p class="activity__questioner_name">王小明</p>
+                                <p class="activity__questioner_content">請問還可以加人數嗎2</p>
+                            </div>
+                        </div>
+
+                        <div class="activity__question_time">111/08/12 AM.8:00</div>
+
+                    </div>
+
+                </div>
+                <!-- 3 -->
+                <div class="activity__message_detail_out">
+                    <div class="activity__message_detail">
+                        <!-- 留言者照片 -->
+                        <div class="activity__questioner_row">
+                            <div class="activity__questioner_img for_hover_user_out">
+                                <!-- 滑過觀看使用者資料 -->
+                                <div class="hover_user_out" id="hover_user_out">
+                                    <!-- 頭貼／姓名／年齡/mail -->
+                                    <div class="row_left">
+                                        <div class="activity_author_img">
+                                            <div class="male_icon">
+                                                <p>女</p>
+                                            </div>
+                                        </div>
+                                        <div class="add_person_content_box">
+                                            <!--   姓名 年齡 -->
+                                            <div class="add_person_content">
+                                                <p class="add_add_person_name">
+                                                    娟娟
+                                                </p>
+                                                <p class="add_add_person_old">
+                                                    25
+                                                </p>
+
+                                            </div>
+                                            <!-- email -->
+                                            <div class="my_icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                                <p class="add_add_person_Email">
+                                                    ccc@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hover_user_about_me">
+                                        <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                    </div>
+
+                                    <div class="post_activity_num">
+                                        <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 留言者名稱內容 -->
+                            <div class="activity__questioner_clo">
+                                <p class="activity__questioner_name">王小明</p>
+                                <p class="activity__questioner_content">請問還可以加人數嗎3</p>
+                            </div>
+                        </div>
+
+                        <div class="activity__question_time">111/08/12 AM.8:00</div>
+
+                    </div>
+
+                </div>
+                <!-- 4 -->
+                <div class="activity__message_detail_out">
+                    <div class="activity__message_detail">
+                        <!-- 留言者照片 -->
+                        <div class="activity__questioner_row">
+                            <div class="activity__questioner_img for_hover_user_out">
+                                <!-- 滑過觀看使用者資料 -->
+                                <div class="hover_user_out" id="hover_user_out">
+                                    <!-- 頭貼／姓名／年齡/mail -->
+                                    <div class="row_left">
+                                        <div class="activity_author_img">
+                                            <div class="male_icon">
+                                                <p>女</p>
+                                            </div>
+                                        </div>
+                                        <div class="add_person_content_box">
+                                            <!--   姓名 年齡 -->
+                                            <div class="add_person_content">
+                                                <p class="add_add_person_name">
+                                                    娟娟
+                                                </p>
+                                                <p class="add_add_person_old">
+                                                    25
+                                                </p>
+
+                                            </div>
+                                            <!-- email -->
+                                            <div class="my_icon">
+                                                <i class="fa-regular fa-envelope"></i>
+                                                <p class="add_add_person_Email">
+                                                    ccc@gmail.com
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="hover_user_about_me">
+                                        <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+                                    </div>
+
+                                    <div class="post_activity_num">
+                                        <p>發起過文章｜10篇</p><a href="./user_personal.html" target="view_window">詳細資料</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- 留言者名稱內容 -->
+                            <div class="activity__questioner_clo">
+                                <p class="activity__questioner_name">王小明</p>
+                                <p class="activity__questioner_content">請問還可以加人數嗎4</p>
+                            </div>
+                        </div>
+
+                        <div class="activity__question_time">111/08/12 AM.8:00</div>
+
+                    </div>
+
+                </div>
+            </section>
+            <div class="see_all_message_box">
+                    <p class="see_all_message">查看全部留言</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+            <!--留言區 -->
+            <div class="activity_user_message">
+                <input type="text" class="message_box" placeholder="留言"></input>
+                <i class="fa-regular fa-paper-plane"></i>
+                <!-- <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-circle-plus"></i> -->
+            </div>
+
+        </div>
+    </div>  <!--(覆蓋)詳細活動--> 
+
+    <!-- (覆蓋)報名者資訊 -->
+
+    <div class="activity_add_personal_display display_none" id="activity_add_personal_display">
+
+        <div class="activity_add_personal_content_out">
+            <div class="activity_img border_bottom_gray">
+
+                <!-- 關閉此頁按鈕 -->
+                <div class="view_activity_add_person_close" id="view_activity_add_person_close">
+                    <i class="fa-solid fa-xmark"></i>
+
+                </div>
+            </div>
+
+            <!-- 內容 -->
+            <div class="activity_content_box">
+
+                <!-- 標題 -->
+                <div class="add_person_title_box">
+                    <div class="add_person_title_icon">
+                        <span class="line_icon"></span>
+                        <p>琉球自由淺水</p>
+                    </div>
+                    <h3>活動報名 名單</h3>
+                </div>
+
+            </div>
+
+            <!-- 報名者名單容器 -->
+            <div class="add_person_out" id="add_person_out">
+                <!-- 報名者名單卡片１ -->
+                <div class="add_person_card">
+                    <!-- 卡片左邊 -->
+                    <div class="row_left">
+                        <div class="activity_author_img for_hover_user_out">
+                            <div class="male_icon">
+                                <p>女</p>
+                            </div>
+                            
+                        </div>
+                        <div class="add_person_content_box">
+                            <!--   姓名 年齡 -->
+                            <div class="add_person_content">
+                                <p class="add_add_person_name">
+                                    娟娟
+                                </p>
+                                <p class="add_add_person_old">
+                                    25
+                                </p>
+
+                            </div>
+                            <!-- email -->
+                            <div class="my_icon">
+                                <i class="fa-regular fa-envelope"></i>
+                                <p class="add_add_person_Email">
+                                    ccc@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="agree_btn_out">
+                        <div class="yes_btn">
+                            <p>同意</p>
+                        </div>
+                        <div class="no_btn">
+                            <p>拒絕</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 報名者名單卡片2 -->
+                <div class="add_person_card">
+
+                    <!-- 卡片左邊 -->
+                    <div class="row_left">
+                        <div class="activity_author_img">
+                            <div class="male_icon">
+                                <p>女</p>
+                            </div>
+                        </div>
+                        <div class="add_person_content_box">
+                            <!--   姓名 年齡 -->
+                            <div class="add_person_content">
+                                <p class="add_add_person_name">
+                                    娟娟
+                                </p>
+                                <p class="add_add_person_old">
+                                    25
+                                </p>
+
+                            </div>
+                            <!-- email -->
+                            <div class="my_icon">
+                                <i class="fa-regular fa-envelope"></i>
+                                <p class="add_add_person_Email">
+                                    ccc@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="agree_btn_out">
+                        <div class="yes_btn">
+                            <p>同意</p>
+                        </div>
+                        <div class="no_btn">
+                            <p>拒絕</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- 報名者名單卡片3 -->
+                <div class="add_person_card">
+
+                    <!-- 卡片左邊 -->
+                    <div class="row_left">
+                        <div class="activity_author_img">
+                            <div class="male_icon">
+                                <p>女</p>
+                            </div>
+                        </div>
+                        <div class="add_person_content_box">
+                            <!--   姓名 年齡 -->
+                            <div class="add_person_content">
+                                <p class="add_add_person_name">
+                                    娟娟
+                                </p>
+                                <p class="add_add_person_old">
+                                    25
+                                </p>
+
+                            </div>
+                            <!-- email -->
+                            <div class="my_icon">
+                                <i class="fa-regular fa-envelope"></i>
+                                <p class="add_add_person_Email">
+                                    ccc@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="agree_btn_out">
+                        <div class="yes_btn">
+                            <p>同意</p>
+                        </div>
+                        <div class="no_btn">
+                            <p>拒絕</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 報名者名單卡片4 -->
+                <div class="add_person_card">
+
+                    <!-- 卡片左邊 -->
+                    <div class="row_left">
+                        <div class="activity_author_img">
+                            <div class="male_icon">
+                                <p>女</p>
+                            </div>
+                        </div>
+                        <div class="add_person_content_box">
+                            <!--   姓名 年齡 -->
+                            <div class="add_person_content">
+                                <p class="add_add_person_name">
+                                    娟娟
+                                </p>
+                                <p class="add_add_person_old">
+                                    25
+                                </p>
+
+                            </div>
+                            <!-- email -->
+                            <div class="my_icon">
+                                <i class="fa-regular fa-envelope"></i>
+                                <p class="add_add_person_Email">
+                                    ccc@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="agree_btn_out">
+                        <div class="yes_btn">
+                            <p>同意</p>
+                        </div>
+                        <div class="no_btn">
+                            <p>拒絕</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 報名者名單卡片5 -->
+                <div class="add_person_card">
+
+                    <!-- 卡片左邊 -->
+                    <div class="row_left">
+                        <div class="activity_author_img">
+                            <div class="male_icon">
+                                <p>女</p>
+                            </div>
+                        </div>
+                        <div class="add_person_content_box">
+                            <!--   姓名 年齡 -->
+                            <div class="add_person_content">
+                                <p class="add_add_person_name">
+                                    娟娟
+                                </p>
+                                <p class="add_add_person_old">
+                                    25
+                                </p>
+
+                            </div>
+                            <!-- email -->
+                            <div class="my_icon">
+                                <i class="fa-regular fa-envelope"></i>
+                                <p class="add_add_person_Email">
+                                    ccc@gmail.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="agree_btn_out">
+                        <div class="yes_btn">
+                            <p>同意</p>
+                        </div>
+                        <div class="no_btn">
+                            <p>拒絕</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- (覆蓋)查看對方個人檔案 -->
+
+    <div class="view_personal_display display_none" id="view_personal_display">
+
+        <div class="view_personal_content_out">
+
+
+            <!-- 關閉此頁按鈕 -->
+            <div class="view_personal_close" id="view_personal_close">
+                <i class="fa-solid fa-xmark"></i>
+
+            </div>
+
+
+            <!-- 內容 -->
+            <div class="view_personal_content_box">
+
+                <!-- 標題 -->
+                <div class="view_personal_title_box">
+                    <div class="row_left">
+                        <div class="user_img">
+                            <div class="male_icon">
+                                <p>女</p>
+                            </div>
+                        </div>
+                        <div class="user_person_content_box">
+                            <!--   姓名 年齡 -->
+                            <div class="view_user_content">
+                                <p class="view_user_name">
+                                    娟娟
+                                </p>
+                                <p class="view_user_old">
+                                    25
+                                </p>
+
+                            </div>
+                            <!-- email -->
+                            <div class="my_icon">
+                                <i class="fa-regular fa-envelope"></i>
+                                <p class="view_user_Email">
+                                    ccc@gmail.com
+                                </p>
+                            </div>
+
+                            <div class="post_activitys">
+                                <div class="how_much_post">
+                                    <p>5</p>
+                                    <p>篇文章</p>
+                                </div>
+                                <button class="block">檢舉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="view_personal_about">
+                <h2>關於我</h2>
+                <p>自我介紹即對一群人說明有關自己的事，尤其是在對方不認識自己的情況下。</p>
+
+            </div>
+            <!-- 發過的活動容器 -->
+            <div class="add_person_out">
+                <!--  發過的活動 卡片１ -->
+                <h2>我發起過的團</h2>
+                <div class="activity_card_box">
+                    <div class="activity_card">
+                        <div class="activity_card_img">
+                            <img src="./img/vjd_nd.png" alt="">
+                        </div>
+                        <div class="activity_card_content">
+                            <div class="col">
+                                <div class="row-1">
+                                    <p id="name">陳小明</p>
+                                    <div class="row-1_right">
+                                        <a href="" class="activity_card_deadline">已截止</a>
+                                        <div class="mycard-icon " id="like">
+                                            <i class="fa-solid fa-heart"></i>
+                                            <p>+99</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <h3 class="mycard-title">求游泳教學</h3>
+
+                                <div class="row-2">
+                                    <div class="mycard-icon" id="address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <p>台南市</p> &emsp;
+                                        <p>水多多游泳池</p>
+                                    </div>
+
+                                    <div class="mycard-icon" id="date">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <p>111/08/12-111/08/15</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row-3">
+                                    <div class="keyword-box">
+                                        <a href="" class="keyword">游泳</a>
+                                        <a href="" class="keyword">求教學</a>
+                                        <a href="" class="keyword_male">限女性</a>
+
+                                    </div>
+
+                                    <div class="msg-num-box">
+                                        <div class="mycard-icon " id="msg">
+                                            <i class="fa-solid fa-comment-dots"></i>
+                                            <p>+100</p>
+                                        </div>
+                                        <div class="mycard-icon num-people ">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p>5/10</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  發過的活動 卡片１ -->
+                <div class="activity_card_box">
+                    <div class="activity_card">
+                        <div class="activity_card_img">
+                            <img src="./img/vjd_nd.png" alt="">
+                        </div>
+                        <div class="activity_card_content">
+                            <div class="col">
+                                <div class="row-1">
+                                    <p id="name">陳小明</p>
+                                    <div class="row-1_right">
+                                        <a href="" class="activity_card_deadline">已截止</a>
+                                        <div class="mycard-icon " id="like">
+                                            <i class="fa-solid fa-heart"></i>
+                                            <p>+99</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <h3 class="mycard-title">求游泳教學</h3>
+
+                                <div class="row-2">
+                                    <div class="mycard-icon" id="address">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <p>台南市</p> &emsp;
+                                        <p>水多多游泳池</p>
+                                    </div>
+
+                                    <div class="mycard-icon" id="date">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <p>111/08/12-111/08/15</p>
+                                    </div>
+                                </div>
+
+
+
+                                <div class="row-3">
+                                    <div class="keyword-box">
+                                        <a href="" class="keyword">游泳</a>
+                                        <a href="" class="keyword">求教學</a>
+                                        <a href="" class="keyword_male">限女性</a>
+
+                                    </div>
+
+                                    <div class="msg-num-box">
+                                        <div class="mycard-icon" id="msg">
+                                            <i class="fa-solid fa-comment-dots"></i>
+                                            <p>+100</p>
+                                        </div>
+                                        <div class="mycard-icon num-people">
+                                            <i class="fa-solid fa-user"></i>
+                                            <p>5/10</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 活動詳細底 -->
+
+    <!-- 發文按鈕 -->
+    <button class="write_activity rwd_display" id="write_activity">
+        <!-- <img src="./img/pen.svg" alt=""> -->
+        <i class="fa-solid fa-pen"></i>
+    </button>
+
+    <!--左側滑出 進階搜尋按鈕 -->
+    <div class="moreSearch_button" id="moreSearch_button">
+        <i class="fa-solid fa-filter"></i>
+        <span class="rwd_display"></span>
+        <p class="rwd_display">進階搜尋</p>
+    </div>
+
+    <!--     
+        <div class="moreSearch_out hide" id="moreSearch_out">
+        </div> -->
+    <!-- 進階搜尋內容 -->
+    <div class="moreSearch_card" id="moreSearch_card">
+        <div class="clo_1">
+            <h1 class="first_title">進階搜尋</h1>
+            <a class="moreSearch_card_clear" id="moreSearch_card_clear">全部清除
+                <i class="fa-solid fa-x"></i>
+            </a>
+            <i class="fa-solid fa-chevron-left receive web_display" id="receive"></i>
+        </div>
+        
+        <!-- 進階搜尋 運動類別 -->
+        <div class="moreSearch_card_sprets">
+            <div class="clo_02">
+                <h1 class="moreSearch_card_title"> 運動類別</h1>
+                <p>選擇你想要的運動</p>
+
+            </div>
+            <div class="moreSearch_card_box" id="moreSearch_card_box_Sport">
+                <!-- <button data-click="0" data-Sport_id="1">籃球</button> -->
+            </div>
+        </div>
+
+        <!-- 進階搜尋 需求-->
+        <div class="moreSearch_card_myNeed">
+            <div class="clo_02">
+                <h1 class="moreSearch_card_title">需求</h1>
+                <p>選擇你想要的需求</p>
+
+            </div>
+            <div class="moreSearch_card_box" id="moreSearch_card_PersonalAsk">
+                <!-- <button data-click="0" data-PersonalAsk_id="1">菜鳥求教學</button> -->
+            </div>
+        </div>
+        <!-- 進階搜尋 地點 -->
+        <div class="moreSearch_card_place">
+            <h1 class="moreSearch_card_title ">地點</h1>
+
+            <div id="choose_place_out" class="choose_place_out">
+                <div id="choose_place" class="choose_place" data-AllRegion_id="0">
+                    偏好地區
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+
+                <div id="dropdown_content" class="dropdown_content">
+                    <!-- <div data-AllRegion_id="1">台北市</div> -->
+                </div>
+            </div>
+
+        </div>
+        <!-- 進階搜尋 性別 -->
+        <div class="moreSearch_card_male">
+            <h1 class="moreSearch_card_title"> 性別</h1>
+            <div class="moreSearch_card_box">
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="male" checked>
+                    <label class="form-check-label" for="male">
+                        限男性
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="female" checked>
+                    <label class="form-check-label" for="female">
+                        限女性
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="not_limited" checked>
+                    <label class="form-check-label" for="not_limited">
+                        不限
+                    </label>
+                </div>
+
+            </div>
+        </div>
+        <!-- 進階搜尋 年齡 -->
+        <div class="moreSearch_card_old>">
+            <h1 class="moreSearch_card_title ">年齡</h1>
+
+            <!-- JQ_年齡拉 容器 -->
+            <div class="jq_slider_rang_out">
+
+                <!-- 拉桿 -->
+                <div class="jq_slider_rang">
+                    <div id="slider-range" class="slider-range"></div>
+                </div>
+
+                <!-- 年齡範圍文字 -->
+                <p id="amount"></p>
+
+            </div>
+        </div>
+
+        <!-- 進階搜尋 人數 -->
+        <div class="moreSearch_card_old>">
+            <h1 class="moreSearch_card_title ">人數</h1>
+
+            <!-- JQ_人數拉 容器 -->
+            <div class="jq_slider_rang_out">
+
+                <!-- 拉桿 -->
+                <div class="jq_slider_rang">
+                    <div id="slider-range-old" class="slider-range"></div>
+                </div>
+
+                <!-- 年齡範圍文字 -->
+                <p id="amount_old"></p>
+
+            </div>
+        </div>
+        <div>
+            <div class="moreSearch_card_search"> <div>搜尋</div><i class="fa-solid fa-magnifying-glass"></i></div>
+        </div>
+        
+    </div>
+
+    <!-- 導引列 -->
+    <div class="nav" id="nav">
+        <div class="nav_content container">
+            <div class="nav_content_logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.36 173.89"  stroke="currentColor" id="nav_svg">
+                    <defs>
+                    </defs>
+                    <title>logo</title>
+                    <g id="圖層_2" data-name="圖層 2">
+                        <g id="圖層_1-2" data-name="圖層 1">
+                            <path class="cls-1"
+                                d="M126.11,137l.75-86.06A20,20,0,0,0,107,30.69l-65.24-.58-20.84-.17h-.17A20.09,20.09,0,0,0,.74,49.8L0,135.87a20,20,0,0,0,19.85,20.19L83,156.6a26.81,26.81,0,0,1,22.63,13l1.72,2.9a2.92,2.92,0,0,0,4.55.58A47.9,47.9,0,0,0,126,141.59c.06-.87.1-1.68.1-2.41a5.29,5.29,0,0,1,0-.8V138C126.09,137.63,126.11,137.3,126.11,137ZM50.24,119c0,9.09-7.7,16.48-17.14,16.48S16,128.09,16,119V103.83a6.49,6.49,0,1,1,13,0V119c0,1.93,1.86,3.5,4.16,3.5s4.16-1.57,4.16-3.5V61.74a6.49,6.49,0,1,1,13,0Zm18.07,8.43a6.49,6.49,0,0,1-13,0V61.57a6.49,6.49,0,0,1,13,0ZM108,119c0,9.09-7.7,16.48-17.14,16.48S73.74,128.09,73.74,119V61.22a6.49,6.49,0,1,1,13,0V119c0,1.93,1.86,3.5,4.16,3.5S95,120.93,95,119V61.74a6.49,6.49,0,1,1,13,0Z" />
+                            <path class="cls-1" d="M43.25,161.5l0,.06v-.06Z" />
+                            <path class="cls-1"
+                                d="M174.11,147.05A56.41,56.41,0,0,1,162.26,160a5.21,5.21,0,0,1-5.48,1,6.25,6.25,0,0,1-3.25-2.57l-4.7-7.72a18.81,18.81,0,0,0-15.09-9c.08-1.26.1-2.34.1-3.23l0,.06v-.06c0-.47,0-.91,0-1.38L134.59,51a27.72,27.72,0,0,0-27.5-28L42.28,22.4A27.78,27.78,0,0,1,69.52,0H155.6a27.76,27.76,0,0,1,27.76,27.76v86.08c0,.46,0,.91,0,1.37v.06l0-.06A57,57,0,0,1,174.11,147.05Z" />
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+            <!-- <p>JoinExercise.
+            </p> -->
+            <div class="sign_in web_display sign_in_for_js">
+                登 入
+            </div>
+
+               <!-- 漢堡選單-rwd -->
+               <div class="menu_out">
+                <div class="menu web_display" id="nav_menu">
+                    <i class="fa-solid fa-bars menu_i"></i>                    
+                    <div class="nav_dropdown">
+                        <div class="nav_index_for_js">首頁</div>
+                        <div >我要發文</div>
+                        <div class="sign_up_for_js">註冊</div>
+                        <div class="sign_out_display_none sign_out_for_js">登出</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="nav_content_right">
+                <div class="nav_content_right_without_sign_in rwd_display">
+                    <div class="sign_up rwd_display nav_index_for_js" id="nav_index">
+                        <i class="fa-solid fa-house"></i>
+                        首 頁
+                    </div>
+
+                    <div class="sign_up rwd_display" id="nav_post">
+                        文章區
+                    </div>
+
+                    <div class="sign_up rwd_display sign_up_for_js" id="sign_up">
+                        註 冊
+                    </div>
+                    <div class="sign_up rwd_display sign_out_display_none sign_out_for_js" id="sign_out">
+                        登 出
+                    </div>
+                </div>
+                <div class="sign_in rwd_display sign_in_for_js"  id="sign_in">
+                    登 入
+                </div>
+
+            </div>
+        </div>
+        <!-- 登入窗 -->
+        <div class="log_in_alert" id="log_in_alert" style="display: none;">
+            <div class="triangle"></div>
+            <div class="log_in_out">
+
+                <!-- 登入標題 -->
+                <div class="log_in_title">
+                    <h1>Log In</h1>
+                </div>
+                <!-- 輸入帳號 -->
+                <div class="input_box">
+
+                    <i class="fa-solid fa-user-large"></i>
+                    <input type="text" placeholder="請輸入您的Email" id="login_email">
+                </div>
+
+                <!-- 輸入密碼 -->
+                <div class="input_box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="請輸入您的密碼" id="login_password">
+                </div>
+
+                <!-- 密碼驗證 /忘記密碼 -->
+                <div class="log_in_msg">
+                    <div class="x_out">
+                        <img src="./img/remove.png" alt="">
+                        <p>請重新輸入</p>
+                    </div>
+                    <p>忘記密碼</p>
+                </div>
+
+                <!-- 登入按鈕 -->
+                <div class="log_in_btn" id="log_in_btn">登入</div>
+
+                <!-- 或加入我們（文字） -->
+                <div class="or_add_us">
+                    <div class="or_add_us_line"></div>
+                    <p>或加入我們</p>
+                    <div class="or_add_us_line"></div>
+
+                </div>
+
+                <!-- 註冊按鈕 -->
+                <div class="sign_up_btn">註冊</div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 頭區 -->
+
+    <div class="header">
+        <div class="header_mask">
+            123
+            <div class="header_content container">
+                <!-- 點選此區塊跳轉到文章區 -->
+
+                    <div class="sligen_box">
+
+                        <h1 class="web_slogen rwd_display">想運動 我陪你 | 運動路上有你有我</h1>
+                        <div class="web_name_row">
+                            <h1 class="web_name  rwd_display">揪運動</h1>
+                            <h1 class="web_name rwd_display">JoinExercise.</h1>
+                            <!-- <h1 class="web_name web_display">揪運動</h1> -->
+                            <!-- <h1 class="web_slogen_rwd web_display">尋找你的運動夥伴 !</h1> -->
+                        </div>
+                    </div>
+            
+                <!-- <p id="En-slogen">Let's Join Exercise.</p> -->
+                <div class="date_box">
+                    <main>
+                        <div class="input-daterange input-group" id="flight-datepicker">
+                            <!-- 開始日期 -->
+                            <div class="form-item">
+                                <label>活動開始時間</label>
+                                <!-- <input type="datetime-local" id="start-date" name="start"/> -->
+                                <input type="text" autocomplete="off" id="start_date" name="start" placeholder="請輸入活動開始時間" size="25">
+                                
+                            </div>
+                            <i class="fa-solid fa-calendar-days rwd_display" style="color:#fff;"></i>
+                            <!-- 結束日期 -->
+                            <div class="form-item">
+                                <label>活動結束時間</label>
+                                <!-- <input type="datetime-local" id="start-date" name="start"/> -->
+                                <input type="text" autocomplete="off" id="end_date" name="end"  placeholder="請輸入活動結束時間" size="25">
+                                
+                            </div>
+                            <i class="fa-solid fa-calendar-days rwd_display" style="color:#fff;"></i>
+                        </div>
+                    </main>
+                </div>
+
+                <div class="search_box">
+                    <div class="search_input_box">
+
+                        <input type="text" placeholder="請輸入活動標題">
+
+                    </div>
+                    <div class="search_btn">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 條件搜索 -->
+    <!-- <div class="search_option_out">
+        <div class="search_option container">
+        </div>
+    </div> -->
+    <!-- 高光區 -->
+    <div class="highlight">
+        <div class="highlight_title">
+            <h1>熱門運動類別</h1>
+        </div>
+         <!-- owl -->
+         <div class=" owl-carousel owl-theme">
+            <!-- 1 -->
+            <div class=" item" id="highlight_card_web">
+                <div class="highlight_card_img" style="background-image:linear-gradient(360deg, #1a1111af 0%,
+                rgba(26, 17, 17, 0.43601) 20%,rgba(26, 17, 17, 0) 74.79%),url(./img/highline/swim.jpg);">
+    
+                    <!-- 1 -->
+                    <div class="highlight_card_content">
+                        <div class="highlight_card_user_img" style="background-image: url(./img/2.png);"></div>
+                        <div class="highlight_card_text">
+                            <p class="highlight_card_username">
+                                許志祥
+                            </p>
+                            <p class="highlight_card_name">
+                                求教游泳
+                            </p>
+    
+                        </div>
+                    </div>
+    
+                    <div class="mycard-icon highlight_card_color" id="like">
+                        <a href="#" class="highlight_card_like">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <p>&ensp;30</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class=" item"  id="highlight_card_web">
+                <div class="highlight_card_img" style="background-image:linear-gradient(360deg, #1a1111af 0%,
+                rgba(26, 17, 17, 0.43601) 20%,
+                rgba(26, 17, 17, 0) 74.79%),url(./img/highline/basketball.jpg);">
+                    <div class="highlight_card_content">
+                        <div class="highlight_card_user_img"  style="background-image: url(./img/5.png)"></div>
+                        <div class="highlight_card_text">
+                            <p class="highlight_card_username">
+                                王倩茜
+                            </p>
+                            <p class="highlight_card_name">
+                                週五打籃球
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="mycard-icon highlight_card_color" id="like">
+                        <a href="#" class="highlight_card_like">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <p>&ensp;25</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class=" item" id="highlight_card_web">
+                <div class="highlight_card_img" style="background-image:linear-gradient(360deg, #1a1111af 0%,
+                rgba(26, 17, 17, 0.43601) 20%,
+                rgba(26, 17, 17, 0) 74.79%),url(./img/highline/gym.jpg);">
+                    <div class="highlight_card_content">
+                        <div class="highlight_card_user_img"></div>
+                        <div class="highlight_card_text">
+                            <p class="highlight_card_username">
+                                范冰冰
+                            </p>
+                            <p class="highlight_card_name">
+                                尋找每周五健身夥伴
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="mycard-icon highlight_card_color" id="like">
+                        <a href="#" class="highlight_card_like">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <p>+99</p>
+                    </div>
+                </div>
+            </div>
+            <!--  4-->
+            <div class=" item" id="highlight_card_web">
+                <!-- 照片放在html標籤裡 -->
+                <div class="highlight_card_img" style="background-image:linear-gradient(360deg, #1a1111af 0%,
+                rgba(26, 17, 17, 0.43601) 20%,
+                rgba(26, 17, 17, 0) 74.79%),url(./img/highline/run.jpg);">
+                    <div class="highlight_card_content">
+                        <div class="highlight_card_user_img"  style="background-image: url(./img/4.png)"></div>
+                        <div class="highlight_card_text">
+                            <p class="highlight_card_username">
+                                熱情小夥
+                            </p>
+                            <p class="highlight_card_name">
+                                府城馬拉松組團
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="mycard-icon highlight_card_color" id="like">
+                        <a href="#" class="highlight_card_like">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <p>&ensp;12</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class=" item" id="highlight_card_web">
+                <!-- 照片放在html標籤裡 -->
+                <div class="highlight_card_img" style="background-image:linear-gradient(360deg, #1a1111af 0%,
+                rgba(26, 17, 17, 0.43601) 20%,
+                rgba(26, 17, 17, 0) 74.79%),url(./img/highline/6_badminton.jpg);">
+                    <div class="highlight_card_content">
+                        <div class="highlight_card_user_img"  style="background-image: url(./img/1.png)"></div>
+                        <div class="highlight_card_text">
+                            <p class="highlight_card_username">
+                                王倩茜
+                            </p>
+                            <p class="highlight_card_name">
+                                羽毛球組隊
+                            </p>
+    
+                        </div>
+                    </div>
+                    <div class="mycard-icon highlight_card_color" id="like">
+                        <a href="#" class="highlight_card_like">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+                        <p>&ensp;10</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+          </div>
+    </div>
+
+
+ 
+    <!-- 已發起活動 -->
+    <div class="main" >
+        <div class="activity container" id="HI">
+            <h1 >已發起活動</h1>
+            <div class="activity_card_out" id="activity_card_out">
+ 
+
+
+        </div>
+    </div>
+    <!-- 腳區 -->
+    <!-- <div class="footer">
+    </div>
+ -->
+
+
+
+    <!-- ---------------------------------- -->
+    
+
+    <!-- 日期選擇器 -->
+    <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script> -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js'></script>
+    <!-- <script src="js/date.js"></script> -->
+
+    <!-- 盛弘打得js -->
+    <script src="./js/main.js"></script>
+    <script src="./js/write_activity.js"></script>
+    <script src="./js/nav.js"></script>
+
+    <!-- 左側滑出，進階搜尋  -->
+    <script src="js/moreSearch.js"></script>
+    <!-- <script src="js/moreSearch_place.js"></script> -->
+    <!--範位拉桿-->
+    <script src="./js/slider-rang.js"></script>
+    <!--作者資料資訊-->
+    <!-- <script s drc="./js/author_data_display.js"></script> -->
+    <!--header的時間範圍-->
+    <script src="./js/index_laydate.js"></script>
+
+
+    
+    <!-- owl -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script>
+    <!-- owl調整顯示 -->
+    <script src="./js/highlight_owl.js"></script>
+</body>
+
+</html>

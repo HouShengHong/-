@@ -1,0 +1,130 @@
+@import './@public_scss_mix.scss';
+
+
+
+
+/* 高光區---------------------------------- */
+
+// 圓圈
+.circle_web{
+    width: 100%;
+    position: absolute;
+    bottom: 3px;
+    left: 40%;
+    cursor: pointer;
+    // z-index: 100;
+    .current{
+        background-color: rgb(132, 132, 132);
+    }
+  li{
+        border: #fff 1pt solid;
+        background-color: #e8e8e8;
+        width: 10px;
+        height: 10px;
+        float: left;
+       
+        margin-right: 2px;
+        border-radius: 50px;
+        list-style: none;
+    }
+}
+
+// 下一頁按鈕
+.prev_web{
+display: none;
+
+
+width: 30px;
+height: 40px;
+
+text-align: center;
+line-height: 40px;
+position: absolute;
+left: 8px;
+top: 35%;
+cursor: pointer;
+&:hover i{
+    margin-right: 10px;
+    transition: 0.2s all linear;
+}
+i{
+    color:#fff;
+}
+}
+
+
+.next_web{
+display: none;
+
+width: 30px;
+height: 40px;
+
+text-align: center;
+line-height: 40px;
+position: absolute;
+right: 8px;
+top: 35%;
+cursor: pointer;
+i{
+    color:#fff;
+}
+&:hover i{
+    // font-size: 1.5rem;
+    margin-left: 10px;
+    transition: 0.2s all linear;
+}
+}
+
+
+
+
+.highlight_card_out_web {
+    box-sizing: border-box;
+    width: 1200px;
+    height: 225px;
+    border: 0pt solid blue;
+    // padding:2rem  8rem;
+    overflow: hidden;
+    position: relative;
+    margin: 0 8rem;
+   
+}
+
+
+#highlight_list_web{
+
+    position: absolute;
+    // top: 0;
+    // left: 0;
+    width: 500%;
+}
+    
+
+.highlight_card_web {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    /* height: 10rem; */
+    width: 375px;
+    // padding: 10px;
+    height: 200px;
+    /* flex-grow: 1; */
+    // display: flex;
+    // align-items: flex-end;
+    float: left;
+    
+    margin: 0;
+    margin-right: 1rem;
+    list-style: none;
+    
+}
+
+// .highlight_card_content
+// {
+//     display: flex;
+//     align-items: center;
+//     margin-left:1rem;
+//     margin-bottom: 1rem;
+// }
+
+
+

@@ -1,0 +1,223 @@
+//＠＠ 引入繼承模組
+@import './@public_scss_mix.scss';
+
+// 隱藏整個區塊用
+.display_none {
+    display: none;
+}
+
+.activity_add_personal_display {
+    @extend %activity_display;
+
+    .activity_content_box {
+        background-color: $background_light_grey;
+       
+    }
+}
+
+.activity_add_personal_content_out {
+    @extend %activity_content_out;
+    background-color: $background_light_grey;
+}
+
+
+.view_activity_add_person_close 
+{
+    @extend %activity_close;
+
+    i 
+    {
+        transition: all 0.5s;
+        @extend %close_icon;
+    }
+    &:hover
+    {
+        i
+        {
+            transform: translateY(-3px);
+            font-size: 2rem;
+            line-height: 3rem;
+            color: #FF5858;
+        }
+    }
+}
+
+
+//  標題
+.add_person_title_box {
+    .add_person_title_icon {
+        @extend %flex_row;
+    }
+
+    @extend %flex_column;
+    margin: 1rem 0;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: hsla(0, 0%, 13%, 1);
+
+        margin-left: 1.3rem;
+        margin-top: 1rem;
+    }
+
+}
+
+
+
+// 卡片區容器
+.add_person_out {
+    @extend %flex_column;
+
+}
+
+// 卡片 
+.add_person_card {
+    @extend %flex_row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    padding: 1.5rem 5.5rem;
+
+    background-color: #fff;
+    margin-bottom: 0.5rem;
+
+    .activity_author_img {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 0rem;
+
+        .male_icon {
+
+            width: 1.5rem;
+            height: 1.5rem;
+            background-color: $pink;
+            z-index: 10;
+            border-radius: 25px;
+
+            float: right;
+            margin-top: 2.5rem;
+            position: relative;
+            left: 0.5rem;
+
+            p {
+                color: white;
+                text-align: center;
+                line-height: 1.5rem;
+            }
+        }
+    }
+}
+
+
+.for_hover_user_out:hover .hover_user_out
+{
+    display: block;
+}
+
+
+// 頭貼.姓名靠右
+.row_left {
+    @extend %flex_row;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_person_content_box,
+.add_person_content {
+    @extend %flex_row;
+
+}
+
+
+
+// 報名者姓名,年齡,Emial
+.add_person_content_box {
+    @extend %flex_column;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 2rem;
+
+    .add_person_content {
+        font-weight: 500;
+
+        p:nth-child(1) {
+            padding-right: 0.5rem;
+            border-right: 1.5px solid black;
+        }
+
+        p:nth-child(2) {
+            padding-left: 0.5rem;
+        }
+    }
+
+    // email
+    .my_icon {
+        @extend %my_icon;
+        margin: 0;
+        margin-top: 1rem;
+
+        p {
+            margin: 0;
+            margin-left: 1rem;
+        }
+    }
+}
+
+%agree_btn {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 2px 15px;
+    background-color: #21CD24;
+    color: #fff;
+    border-radius: 8px;
+}
+// 同意 拒絕按鈕
+.agree_btn_out {
+
+    @extend %flex_column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    .yes_btn {
+        @extend %agree_btn;
+        background-color: #5CC428;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background-color: #21CD24;
+            transform: translate(-1px,-2px);
+            box-shadow: 2px 2px 2px rgba(0,0,0,0.2)
+        }
+    }
+    .attend_btn {
+        @extend %agree_btn;
+        cursor: default;
+        border: solid 2px #21CD24;
+        color: #21CD24;
+        background-color: #fff;
+    }
+
+
+    .no_btn {
+        @extend %agree_btn;
+        background-color: $pink;
+        &:hover {
+            background-color: #ffa6a6;
+            
+        }
+    }
+
+}
+
+.add_person_card .hover_user_out
+{
+    top: 4rem;
+}
+
+
+.add_person_card .hover_user_out .row_left
+{
+    display: -webkit-box;
+}

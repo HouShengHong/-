@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>揪運動-我要發文</title>
+    <link rel="icon" href="./img/title.ico" type="image/x-icon" />
+
+
+    <!-- 日期選擇器 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+    <link rel='stylesheet prefetch'
+        href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker3.standalone.css'>
+
+    <link rel="stylesheet" href="css/date_post.css">
+
+
+    <!-- 引用fontawe_some -->
+    <script src="https://kit.fontawesome.com/629732af24.js" crossorigin="anonymous"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css(scss)/nav.css">
+    <link rel="stylesheet" href="./css(scss)/Log_in.css">
+    <link rel="stylesheet" href="./css(scss)/moreSearch.css">
+    <link rel="stylesheet" href="./css(scss)/post_activity.css">
+
+
+
+    <!--  引JQ 年齡範圍拉桿 -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+
+    <!-- 引用laydate -->
+    <script src="./js/laydate/src/laydate.js"></script>
+    
+  
+    <!-- rwd -->
+    <link rel="stylesheet" media="screen and (max-width:720px)" href="./css(scss)/index_rwd.css">
+    <link rel="stylesheet" media="screen and (max-width:720px)" href="./css(scss)/(index)activity_display_rwd.css">
+    
+
+</head>
+
+<body>
+    <!-- 導引列 -->
+    <div class="nav" id="nav">
+        <!-- 導引列項目 -->
+        <div class="nav_content container">
+            <div class="nav_content_logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 183.36 173.89"  stroke="currentColor" id="nav_svg">
+                    <defs>
+                    </defs>
+                    <title>logo</title>
+                    <g id="圖層_2" data-name="圖層 2">
+                        <g id="圖層_1-2" data-name="圖層 1">
+                            <path class="cls-1"
+                                d="M126.11,137l.75-86.06A20,20,0,0,0,107,30.69l-65.24-.58-20.84-.17h-.17A20.09,20.09,0,0,0,.74,49.8L0,135.87a20,20,0,0,0,19.85,20.19L83,156.6a26.81,26.81,0,0,1,22.63,13l1.72,2.9a2.92,2.92,0,0,0,4.55.58A47.9,47.9,0,0,0,126,141.59c.06-.87.1-1.68.1-2.41a5.29,5.29,0,0,1,0-.8V138C126.09,137.63,126.11,137.3,126.11,137ZM50.24,119c0,9.09-7.7,16.48-17.14,16.48S16,128.09,16,119V103.83a6.49,6.49,0,1,1,13,0V119c0,1.93,1.86,3.5,4.16,3.5s4.16-1.57,4.16-3.5V61.74a6.49,6.49,0,1,1,13,0Zm18.07,8.43a6.49,6.49,0,0,1-13,0V61.57a6.49,6.49,0,0,1,13,0ZM108,119c0,9.09-7.7,16.48-17.14,16.48S73.74,128.09,73.74,119V61.22a6.49,6.49,0,1,1,13,0V119c0,1.93,1.86,3.5,4.16,3.5S95,120.93,95,119V61.74a6.49,6.49,0,1,1,13,0Z" />
+                            <path class="cls-1" d="M43.25,161.5l0,.06v-.06Z" />
+                            <path class="cls-1"
+                                d="M174.11,147.05A56.41,56.41,0,0,1,162.26,160a5.21,5.21,0,0,1-5.48,1,6.25,6.25,0,0,1-3.25-2.57l-4.7-7.72a18.81,18.81,0,0,0-15.09-9c.08-1.26.1-2.34.1-3.23l0,.06v-.06c0-.47,0-.91,0-1.38L134.59,51a27.72,27.72,0,0,0-27.5-28L42.28,22.4A27.78,27.78,0,0,1,69.52,0H155.6a27.76,27.76,0,0,1,27.76,27.76v86.08c0,.46,0,.91,0,1.37v.06l0-.06A57,57,0,0,1,174.11,147.05Z" />
+                        </g>
+                    </g>
+                </svg>
+
+            </div>
+            <!-- <p>JoinExercise.
+            </p> -->
+            <div class="sign_in web_display" id="sign_in">
+                登 入
+            </div>
+
+            <!-- 漢堡選單-rwd -->
+            <div class="menu_out">
+                <div class="menu web_display" id="nav_menu">
+                    <i class="fa-solid fa-bars menu_i"></i>                    
+                    <div class="nav_dropdown">
+                        <div>註冊</div>
+                        <div>我要發文</div>
+                        <div>我的最愛</div>
+                        <div>會員中心</div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 靠右列表 -->
+            <div class="nav_content_right  ">
+
+                <!-- 首頁 -->
+                <div class="sign_up rwd_display" id="nav_index">
+                    <i class="fa-solid fa-house"></i>
+                    首 頁
+                </div>
+
+                 <!-- 文章區 -->
+                <div class="sign_up rwd_display" id="nav_post">
+                    文章區
+                </div>
+
+
+                 <!-- 文章區 -->
+                 <div class="sign_up rwd_display" id="nav_like_post">
+                    我的最愛
+                </div>
+
+                <!-- 註冊 -->
+                <div class="sign_up rwd_display" id="sign_up">
+                    註 冊
+                </div>
+                
+                <div class="sign_up rwd_display" id="sign_out">
+                    登 出
+                </div>
+
+                 <!-- 登入 -->
+                <div class="sign_in rwd_display" id="sign_in">
+                    登 入
+                </div>
+
+
+            </div>
+        </div>
+        <!-- 登入窗 -->
+        <div class="log_in_alert" id="log_in_alert" style="display: none;">
+            <div class="triangle"></div>
+            <div class="log_in_out">
+
+                <!-- 登入標題 -->
+                <div class="log_in_title">
+                    <h1>Log In</h1>
+                </div>
+                <!-- 輸入帳號 -->
+                <div class="input_box">
+
+                    <i class="fa-solid fa-user-large"></i>
+                    <input type="text" placeholder="帳號">
+                </div>
+
+                <!-- 輸入密碼 -->
+                <div class="input_box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="密碼">
+                </div>
+
+                <!-- 密碼驗證 /忘記密碼 -->
+                <div class="log_in_msg">
+                    <div class="x_out">
+                        <img src="./img/remove.png" alt="">
+                        <p>請重新輸入</p>
+                    </div>
+                    <p>忘記密碼</p>
+                </div>
+
+                <!-- 登入按鈕 -->
+                <div class="log_in_btn">登入</div>
+
+                <!-- 或加入我們（文字） -->
+                <div class="or_add_us">
+                    <div class="or_add_us_line"></div>
+                    <p>或加入我們</p>
+                    <div class="or_add_us_line"></div>
+
+                </div>
+
+                <!-- 註冊按鈕 -->
+                <div class="sign_up_btn">註冊</div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 頭區 -->
+
+    <div class="header">
+        <div class="header_mask">
+            123
+            <div class="header_content header_content_post_top container">
+                <!-- 點選此區塊跳轉到文章區 -->
+                
+                    <div class="sligen_box">
+                        
+                        <h1 class="web_name">發出你想揪的團</h1>
+                        <h1 class="web_slogen web_slogen_rwd">開始尋找你的夥伴</h1>
+                    </div>
+            
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+    <!-- 發文內容填寫區-->
+    <!-- main>p用indrxcard.scss做 -->
+    <div class="main" >
+        <div class="post_content_padding_top container_post">
+            
+            <!-- 活動標題 -->
+            <div class="post_content_out">
+                <!-- 活動標題 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>活動標題</p>
+                    </div>
+                    
+                    <!-- 標題輸入 -->
+                    <div class="input_box_for_post_activity post_content">
+                        <input type="text" name="Post_title" id="Post_title" placeholder="例：教練，我想打籃球">
+                    </div>
+                    <div class="post_keep" id="Post_title_keep"><img src="./img/post_keep_false.png" alt="" height="16" width="16" style> <span  style="color: rgb(216, 11, 11);">活動標題不得為空白</span></div>  
+                </div>
+          
+                <!-- 活動地點 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>活動地點</p>
+                    </div>
+                    <!-- 放下拉選單和輸入眶 -->
+                    <div class="post_content_place post_content">
+
+                        <!-- 下拉選單 -->
+                        <div class="moreSearch_card_place">
+                            <div id="choose_place_out" class="choose_place_out">
+                                <div id="choose_place" class="choose_place"  data-AllRegion_id="0">
+                                    選擇縣市
+                                    <i class="fa-solid fa-angle-down"></i>
+                                </div>
+                
+                                <div id="dropdown_content" class="dropdown_content">
+                                    <!-- <div data-AllRegion_id="1">台北市</div> -->
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- 地點輸入 -->
+                        <div class="input_box_for_post_activity ">
+                            <input type="text" name="Place" id="Place" placeholder="例：中正技擊館">
+                        </div>  
+                    </div>
+                    <div class="post_keep" id="Place_keep"><img src="./img/post_keep_false.png" alt="" height="16" width="16" style> <span  style="color: rgb(216, 11, 11);">請選擇縣市 及 填寫地點</span></div>
+                </div>
+
+                <!-- 報名時間 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>報名期間</p>
+                    </div>
+                    <div class="date_box post_content">
+                        <div class="input-daterange input-group during_time" id="Start_time_End_time">
+                            <!-- 開始日期 -->
+                            <div class="form-item">
+                                <label>報名開始時間</label>
+                                <div class="date_bar">
+                                    <input type="text" autocomplete="off" id="Start_time" name="start" placeholder="請輸入開始時間">
+                                    <i class="fa-solid fa-calendar-days" style="color:rgb(80, 80, 80);"></i>
+                                    
+                                </div>
+                            </div>
+                            <!-- 結束日期div -->
+                            <div class="form-item">
+                                <label>報名結束時間</label>
+                                <div class="date_bar">
+                                    <input type="text" autocomplete="off" id="End_time" name="end"  placeholder="請輸入結束時間">
+                                    <i class="fa-solid fa-calendar-days" style="color:rgb(80, 80, 80);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 活動期間 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>活動期間</p>
+                    </div>
+                    <div class="date_box post_content">
+                        <div class="input-daterange input-group during_time" id="Activity_start_time_Activity_end_time">
+                            <!-- 開始日期 -->
+                            <div class="form-item">
+                                <label>活動開始時間</label>
+                                <div class="date_bar">
+                                    <input type="text" autocomplete="off" id="Activity_start_time" name="start" placeholder="請輸入開始時間">
+                                    <i class="fa-solid fa-calendar-days" style="color:rgb(139, 139, 139);"></i>
+                                    
+                                </div>
+                            </div>
+                            <!-- 結束日期div -->
+                            <div class="form-item">
+                                <label>活動結束時間</label>
+                                <div class="date_bar">
+                                    <input type="text" autocomplete="off" id="Activity_end_time" name="end"  placeholder="請輸入結束時間">
+                                    <i class="fa-solid fa-calendar-days" style="color:rgb(139, 139, 139);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post_keep" id="time_keep"><img src="./img/post_keep_false.png" alt="" height="16" width="16" style> <span  style="color: rgb(216, 11, 11);">報名期間及活動期間不得為空白</span></div>
+                </div>
+
+             
+                <!-- 人數 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>報名人數限制（選填）</p>
+                    </div>
+
+                        <!-- JQ_人數拉桿 容器 -->
+                    <div class="jq_slider_rang_out">
+
+                        <!-- 拉桿 -->
+                        <div class="jq_slider_rang">
+                            <div id="slider-range-old" class="slider-range"></div>
+                        </div>
+
+                        <!-- 年齡範圍文字 -->
+                        <p id="amount_old"></p>
+
+                    </div>
+
+                </div>
+
+                <!-- 性別 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>性別限制（選填）</p>
+                    </div>
+                    <!-- 性別溝選 -->
+                    <div class="moreSearch_card_box post_content">
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="男性" checked>
+                            <label class="form-check-label" for="male">
+                                限男性
+                            </label>
+                        </div>
+        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="女性" checked>
+                            <label class="form-check-label" for="female">
+                                限女性
+                            </label>
+                        </div>
+        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" value="皆可" checked>
+                            <label class="form-check-label" for="not_limited">
+                                皆可
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 年齡選擇 -->
+                <div class="post_content_box">
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>年齡限制（選填）</p>
+                    </div>
+              
+                     <!-- JQ_年齡拉 容器 -->
+                    <div class="jq_slider_rang_out">
+                         
+                        <!-- 拉桿 -->
+                        <div class="jq_slider_rang">
+                            <div id="slider-range" class="slider-range"></div>
+                        </div>
+
+                        <!-- 年齡範圍文字 -->
+                        <p id="amount"></p>
+                    </div>
+
+                </div>
+                
+                <!-- 活動說明輸入 -->
+                <div class="post_content_box">
+                        
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>活動說明</p>
+                    </div>
+                      <!-- 活動說明輸入 -->
+                      <div class="input_box_for_post_activity post_content">
+                        <textarea type="text" name="" id="PostActivity_content" placeholder="例：還不快點來報隊" cols="10" row="10" ></textarea>
+                    </div>
+                    <div class="post_keep" id="PostActivity_content_keep"><img src="./img/post_keep_false.png" alt="" height="16" width="16" style> <span  style="color: rgb(216, 11, 11);">活動說明不得為空白</span></div>
+                </div>
+                <!-- 運動類別 -->
+                <div class="post_content_box">
+                        
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>運動類別(擇一)</p>
+                    </div>
+
+                    <div class="moreSearch_card_box post_content" id="moreSearch_card_box_Sport">
+                        <!-- <button>跑步</button>
+                        <button>游泳</button>
+                        <button>籃球</button>
+                        <button>馬拉松</button>
+                        <button>爬百岳</button>
+                        <button>游泳</button>
+                        <button>籃球</button>
+                        <button>SUP</button>
+                        <button>自由淺水</button>
+                        <button>游泳</button>
+                        <button>籃球</button>
+                        <button>騎腳踏車</button>
+                        <button>游泳</button>
+                        <button>籃球</button>
+                        <button>SUP</button>
+                        <button>自由淺水</button>
+                        <button>游泳</button>
+                        <button>籃球</button>
+                        <button>騎腳踏車</button> -->
+                    </div>
+
+                </div>
+                <!-- 我的需求 -->
+                <div class="post_content_box">
+                        
+                    <div class="my_icon">
+                        <span class="line_icon"></span>
+                        <p>我的需求(擇一)</p>
+                    </div>
+                    <div class="moreSearch_card_box post_content" id="moreSearch_card_PersonalAsk">
+                        <!-- <button>菜鳥求教學</button>
+                        <button>純練技</button>
+                        <button>缺伴</button>
+                        <button>技術交流</button>
+                        <button>組團招人</button>
+                        <button>增肌</button>
+                        <button>減脂</button>
+                        <button>體驗新事物</button>
+                        <button>高手過招</button>
+                        <button>認識新朋友</button> -->
+                    </div>
+
+                </div>
+                
+                <!-- 送出按鈕 -->
+                <div class="post_content_box">
+                    <div class="send_btn" id="post_activity_send_btn">
+                        <p>送出</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ---------------------------------- -->
+
+
+    <!--範位拉桿-->
+    <script src="./js/slider_rang_post_activity.js"></script>
+
+    <!-- 盛弘打得js -->
+    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/nav.js"></script>
+    <script src="./js/post_activity_laydate.js"></script>
+    <script src="./js/post_activity_main.js"></script>
+    <!-- 日期選擇器 -->
+    <!-- <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script> -->
+    <!-- <script
+        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-dateFormat/1.0/jquery.dateFormat.js'></script> -->
+
+    <!-- <script src="js/date.js"></script> -->
+</body>
+
+</html>
+
+

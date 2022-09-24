@@ -1,0 +1,53 @@
+.progress_out
+{
+    padding-top: 50px;
+    height: 100px;
+}
+
+/* 引用別人的進度條 */
+.progress {
+    counter-reset:step;
+  }
+  .progress li {
+    list-style-type: none;
+    float:left;
+    width: 20%;
+    position:relative;
+    text-align:center;
+    font-weight: 550;
+  }
+  .progress li:before {
+    content:counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height:30px;
+    border:1px solid #ddd;
+    display:block;
+    text-align:center;
+    margin:0 auto 10px auto;
+    border-radius:50%;
+    background-color: #fff;
+  }
+  .progress li:after {
+    content:"";
+    position:absolute;
+    width: 100%;
+    height:1px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index:-1;
+  }
+  .progress li:first-child:after {
+    content:none;
+  }
+  .progress li.active {
+    color:#21cd21;
+  }
+  .progress li.active:before {
+    border-color:#21cd21;
+  }
+  .progress li.active + li:after {
+    background-color: #21cd21;
+  }
