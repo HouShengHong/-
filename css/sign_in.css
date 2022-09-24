@@ -1,0 +1,169 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    font-size: 16px;
+}
+body
+{
+    min-width: 1280px;
+    /* background-image: ; */
+}
+.border_bottom_gray
+{
+    border-bottom: 1px solid rgb(128,128,128,0.4);
+}
+.write_activity
+{
+    position: fixed;
+    z-index: 1;
+    bottom: 3rem;
+    right: 2rem;
+    border: none;
+    border-radius: 50%;
+    background-color: black;
+    /* line-height: 3rem; */
+    width: 3rem;
+    height: 3rem;
+}
+.write_activity>i
+{
+    font-size: 2rem;
+    color:white;
+}
+.header
+{
+    height: 15rem;
+    width: 100%;
+    /* background-color: aqua; */
+    background-image: url(../img/index_darkness.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -300px;
+    color: transparent  ;
+    /* min-width: 1280px; */
+}
+.container
+{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    width: calc(100%-16rem);
+    /* min-width: 1440px; */
+}
+.nav
+{
+    position: sticky;
+    top: 0;
+    height: 4rem;
+    background-color: rgb(173, 216, 230,0.5);
+}
+.nav_content
+{
+    background-color: rgb(200,255,200,0.5);
+    height: 4rem;
+}
+.nav_content_logo
+{
+    float: left;
+    padding: 0.5rem;
+    height: 4rem;
+    width: 4rem;
+}
+.nav_content_logo>svg
+{
+    width: 3rem;
+    height: 3rem;
+}
+    .nav_content_right
+    {
+        line-height: 4rem;
+        float: right;
+        /* height: 4rem;
+        width: 8rem; */
+        background-color: rgb(255,165,0,0.5);
+    }
+.sign_up
+{
+    float: left;
+    height: 4rem;
+    width: 4rem;
+}
+.sign_in
+{
+    float: left;
+    height: 4rem;
+    width: 4rem;
+}
+.header_title
+{
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 9rem;
+    font-weight: 900;
+}
+.progress_out
+{
+    padding-top: 50px;
+    height: 100px;
+}
+
+/* 引用別人的進度條 */
+.progress {
+    counter-reset:step;
+  }
+  .progress li {
+    list-style-type: none;
+    float:left;
+    width: 25%;
+    position:relative;
+    text-align:center;
+  }
+  .progress li:before {
+    content:counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height:30px;
+    border:1px solid #ddd;
+    display:block;
+    text-align:center;
+    margin:0 auto 10px auto;
+    border-radius:50%;
+    background-color: #fff;
+  }
+  .progress li:after {
+    content:"";
+    position:absolute;
+    width: 100%;
+    height:1px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index:-1;
+  }
+  .progress li:first-child:after {
+    content:none;
+  }
+  .progress li.active {
+    color:green;
+  }
+  .progress li.active:before {
+    border-color:green;
+  }
+  .progress li.active + li:after {
+    background-color: green;
+  }
+/* 引用別人的進度條 */
+
+.data
+{
+    padding-top: 50px;
+    background-color: azure;
+    height: 500px;
+}
+

@@ -1,0 +1,19 @@
+.data>form
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.data>form>div
+{
+    box-sizing: border-box;
+    padding: 50px;
+    width: 50%;
+    border: 1px solid red;
+}
+.data>form>div:last-child
+{
+    box-sizing: border-box;
+    padding: 50px;
+    width: 100%;
+    border: 1px solid red;
+}

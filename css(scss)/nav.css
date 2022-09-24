@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* 導引列（Top）*/
+.nav {
+  float: left;
+  width: 100%;
+  z-index: 5;
+  top: 0;
+  height: 5rem;
+  background-color: transparent;
+}
+
+.static {
+  position: static;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.fixed_top_0 {
+  position: sticky;
+  top: 0px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.nav_content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: transparent;
+  height: 100%;
+  padding: 1rem 0;
+}
+
+.nav_content_logo {
+  /* display: flex; */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* padding-top: 10px; */
+  float: left;
+  padding: 0.5rem;
+  height: 100%;
+  width: 4rem;
+}
+
+.nav_content_logo > svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: white;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+  cursor: pointer;
+}
+.nav_content_logo > svg:hover {
+  fill: #21cd24 !important;
+  stroke: #21CD24 !important;
+  -webkit-transform: translate(0px, -2px);
+          transform: translate(0px, -2px);
+}
+
+/* .nav_content>p{
+
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Poppins", Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    float: left;
+
+    margin: 0;
+    line-height: 3rem;
+
+} */
+.nav_content_right {
+  /* line-height: 4rem; */
+  padding-top: 0.5rem;
+  float: right;
+  /* height: 4rem;
+  width: 8rem; */
+  /* background-color: rgb(255,165,0,0.5); */
+}
+
+/* 註冊 ,文章區,首頁 */
+.sign_up {
+  float: left;
+  /* height: 4rem;
+  width: 4rem; */
+  /* border-bottom: #f3f3f370 1px solid; */
+  line-height: 2.5rem;
+  margin-right: 3rem;
+  cursor: pointer;
+  color: rgba(243, 243, 243, 0.768627451);
+  font-size: 1rem;
+  font-weight: 500;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+}
+
+.sign_up > i {
+  margin-right: 0.5rem;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+
+.sign_up:hover {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #21CD24 !important;
+  border-bottom: #21cd24 2px solid;
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.sign_up:hover i {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #21CD24;
+  /* border-bottom: #f3f3f3 2px solid; */
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+}
+
+/* 登入 */
+.sign_in {
+  border: #F8F7F7 1px solid;
+  border-radius: 50px;
+  padding: 0 1rem;
+  color: #fff;
+  float: left;
+  line-height: 2.5rem;
+  /* height: 4rem;
+  width: 4rem; */
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+
+.sign_in_user {
+  float: left;
+  border: none !important;
+  padding: 0rem !important;
+}
+
+.sign_in_hover:hover {
+  /* font-weight: 600; */
+  color: #fff !important;
+  border-color: #21CD24 !important;
+  background-color: #21CD24;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-weight: 600;
+  -webkit-transform: translate(-1px, -3px);
+          transform: translate(-1px, -3px);
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sign_in > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.search_option_out {
+  width: 100%;
+  /* height:500px; */
+  background-color: aqua;
+  /* min-width: 1280px; */
+}
+
+.search_option {
+  /* margin-left: 5rem;
+  margin-right: 5rem;
+  width: calc(100%-10rem); */
+  height: 10rem;
+  background-color: yellow;
+}
+
+.sign_out_display_none {
+  display: none;
+}
+
+.nav_content_right_without_sign_in {
+  float: left;
+}/*# sourceMappingURL=nav.css.map */
